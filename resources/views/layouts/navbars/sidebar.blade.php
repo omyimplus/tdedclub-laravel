@@ -26,6 +26,13 @@
         </a>
         <div class="collapse show" id="laravelExample">
           <ul class="nav">
+            <li class="nav-item{{ $activePage == 'blogs' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ url('/blogs') }}">
+                    <span class="sidebar-mini"> <i class="fas fa-rss"></i> </span>
+                    <span class="sidebar-normal">{{ __('Blogs') }} </span>
+                </a>
+            </li>
+
             <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('profile.edit') }}">
                 <span class="sidebar-mini"> UP </span>

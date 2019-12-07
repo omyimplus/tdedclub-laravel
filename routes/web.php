@@ -49,9 +49,15 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
-	Route::resource('user', 'UserController', ['except' => ['show']]);
+    Route::get('test', function (){
+return view('blogs.test');
+    });
+    Route::resource('blogs', 'BlogController', ['except' => ['show']]);
+    Route::resource('user', 'UserController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
-	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
+    Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
+    Route::get('ckeditor', 'CkeditorController@index');
+    Route::post('ckeditor/upload', 'CkeditorController@upload')->name('ckeditor.upload');
 });
 
