@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBlogsTable extends Migration
+class CreateYoutubesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateBlogsTable extends Migration
      */
     public function up()
     {
-        Schema::create('blogs', function (Blueprint $table) {
+        Schema::create('youtubes', function (Blueprint $table) {
             $table->increments('id');
             $table->smallInteger('cid')->default(0);
-            $table->smallInteger('uid')->default(1);
+            $table->smallInteger('uid')->default(0);
             $table->string('title');
             $table->text('description');
             $table->longtext('content')->nullable();
@@ -40,6 +40,6 @@ class CreateBlogsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('blogs');
+        Schema::dropIfExists('youtubes');
     }
 }

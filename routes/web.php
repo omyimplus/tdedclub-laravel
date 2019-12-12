@@ -14,7 +14,15 @@
 Route::get('/', function () {
     return view('pages.user.home');
 });
-Auth::routes();
+Route::get('/admin', function () {
+    return redirect()->guest('login');
+});
+
+Auth::routes([
+    'register' => false, 
+    'reset' => false, 
+    'verify' => false,
+]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
@@ -49,11 +57,14 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('test', function (){
-return view('blogs.test');
-    });
+    Route::get('test', function (){ return view('blogs.test');});
+
     Route::resource('blogs', 'BlogController', ['except' => ['show']]);
+    Route::resource('youtube', 'YoutubeController', ['except' => ['show']]);
+    Route::resource('analyze', 'AnalyzeController', ['except' => ['show']]);
+    Route::resource('zean', 'ZeanController', ['except' => ['show']]);    
     Route::resource('user', 'UserController', ['except' => ['show']]);
+
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
     Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
