@@ -17,6 +17,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'admin@material.com',
             'email_verified_at' => now(),
             'password' => bcrypt('secret'),
+            'level' => 100,
             'created_at' => now(),
             'updated_at' => now(),
         ]);

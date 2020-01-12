@@ -60,7 +60,7 @@
             <div class="row">
                 <div class="card-footer ml-auto mr-auto">
                     <a class="btn btn-warning" style="text-decoration:none;" href="{{url('youtube/')}}"> &nbsp; &nbsp; Cancel &nbsp; &nbsp; </a> &nbsp;
-                    <button type="submit" class="btn btn-primary">Add data</button>
+                    <button type="submit" class="btn btn-primary">บันทึกข้อมูล</button>
                 </div>
             </div>
             @csrf

@@ -14,15 +14,32 @@
 Route::get('/', function () {
     return view('pages.user.home');
 });
+
+Route::get('/live', function () {
+    return view('pages.user.live');
+});
+
+Route::get('/review', function () {
+    return view('pages.user.review');
+});
+
+Route::get('/tded', function () {
+    return view('pages.user.tded');
+});
+
+Route::get('/vicrow', function () {
+    return view('pages.user.vicrow');
+});
+
+Route::get('/highlight', function () {
+    return view('pages.user.highlight');
+});
+
 Route::get('/admin', function () {
     return redirect()->guest('login');
 });
 
-Auth::routes([
-    'register' => false, 
-    'reset' => false, 
-    'verify' => false,
-]);
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
@@ -59,11 +76,13 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('test', function (){ return view('blogs.test');});
 
+    Route::resource('tstep', 'TstepController', ['except' => ['show']]);
     Route::resource('blogs', 'BlogController', ['except' => ['show']]);
     Route::resource('youtube', 'YoutubeController', ['except' => ['show']]);
     Route::resource('analyze', 'AnalyzeController', ['except' => ['show']]);
     Route::resource('zean', 'ZeanController', ['except' => ['show']]);    
     Route::resource('user', 'UserController', ['except' => ['show']]);
+    Route::resource('setup', 'SetupController', ['except' => ['show']]);
 
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);

@@ -1,7 +1,6 @@
 <?php
 
-function thaiDate($strDate,$time="")
-{
+function thaiDate($strDate,$time="") {
     $strYear = date("Y",strtotime($strDate))+543;
     $strMonth= date("n",strtotime($strDate));
     $strDay= date("j",strtotime($strDate));
@@ -40,6 +39,10 @@ function addAttributes( $attr_ar ) {
     return $att;
 }
 
+function IsAdmin($level='1') {
+    if (Auth::user()->level >= $level) return true;
+    return false;
+}
 
 function Slug($title, $separator = '-', $language = 'Th') {
     $flip = $separator === '-' ? '_' : '-';

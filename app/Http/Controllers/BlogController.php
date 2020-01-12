@@ -95,9 +95,9 @@ class BlogController extends Controller
         if (isset($fileNameToStore)) {
             if (!empty($bs->image)) {
                 $cover_path  = str_replace('/','\\',public_path('imgs/'.$bs->image));
-                if (!file_exists($cover_path)) unlink($cover_path);                
+                if (is_file($cover_path)) unlink($cover_path);             
             }
-            else $bs->image = $fileNameToStore;
+            $bs->image = $fileNameToStore;
         }
         $bs->save();
         return redirect('/blogs')->with('success','Success! Blog id #'.$id.' has been updated.');

@@ -58,9 +58,18 @@
                   <div class="col-sm-7">
                     <div class="form-group">
                       <input class="form-control" name="password_confirmation" id="input-password-confirmation" type="password" placeholder="{{ __('Confirm Password') }}" />
-                    </div>
+                    </div>               
                   </div>
                 </div>
+
+                <div class="row">
+                    <label class="col-sm-2 col-form-label" for="input-level-confirmation">{{ __('Admin Level') }}</label>
+                    <div class="col-sm-7">
+                      <div class="form-group">
+                      <input class="form-control" name="level" id="level" type="type" value="{{ $user->level }}" placeholder="{{ __('ใส่ระดับเลเวลของแอดมิน') }}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                      </div>
+                    </div>
+                </div>                
               </div>
               <div class="card-footer ml-auto mr-auto">
                 <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>

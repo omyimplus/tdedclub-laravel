@@ -39,7 +39,9 @@ class ZeanController extends Controller
             'team1' => 'required',
             'team2' => 'required',
         ]);
-
+        if(Youtube::where('team1', $request->input('team1'))->where('team2', $request->input('team2'))->first()) {       
+            return redirect()->back()->withInput()->with('error', 'Error! Title has data already exists.');
+        } 
         $zs = new Zean;
         $zs->uid = Auth::user()->id;
         $zs->team1 = $request->input('team1');
@@ -76,7 +78,6 @@ class ZeanController extends Controller
             'team1' => 'required',
             'team2' => 'required',
         ]);
-
         $zs = Zean::find($id);
         $zs->uid = Auth::user()->id;
         $zs->team1 = $request->input('team1');
@@ -86,7 +87,6 @@ class ZeanController extends Controller
         $zs->prevision = $request->input('prevision');
         $zs->updated_at = date('Y-m-d H:i:s');
         $zs->save();
-
         return redirect('/zean')->with('success','Success! ZeanReview post id #'.$id.' has been updated.');
     }
 

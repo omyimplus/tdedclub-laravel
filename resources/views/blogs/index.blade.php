@@ -75,7 +75,7 @@
                                                 <thead class=" text-primary">
                                                     <th>ไอดี</th>
                                                     <th>ชื่อเรื่อง</th>
-                                                    <th>โพส์ตโดย</th>
+                                                    <th class=" text-center">โพส์ตโดย</th>
                                                     <th class=" text-center">ออนไลน์</th>
                                                     <th>&nbsp;</th>
                                                 </thead>
@@ -93,7 +93,7 @@
                                                         <td> 
                                                             <a href="{{url('blogs/'.$b->id.'/edit')}}" rel="tooltip" title="แก้ไข ( id.{{$b->id}} )">{{$b->title}}</a>
                                                         </td>
-                                                        <td>{{creator($b->uid)}}</td>
+                                                        <td class=" text-center">{{creator($b->uid)}}</td>
                                                         <td class="td-actions text-center">
                                                             @php
                                                             if($b->status == 1) { $status='ออนไลน์'; $scolor='danger'; }

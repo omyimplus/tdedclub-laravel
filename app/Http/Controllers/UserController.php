@@ -68,7 +68,8 @@ class UserController extends Controller
             $request->merge(['password' => Hash::make($request->get('password'))])
                 ->except([$hasPassword ? '' : 'password']
         ));
-
+        $user->level=$request->input('level');
+        $user->save();
         return redirect()->route('user.index')->withStatus(__('User successfully updated.'));
     }
 
@@ -81,7 +82,6 @@ class UserController extends Controller
     public function destroy(User  $user)
     {
         $user->delete();
-
         return redirect()->route('user.index')->withStatus(__('User successfully deleted.'));
     }
 }

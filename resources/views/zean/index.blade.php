@@ -5,46 +5,17 @@
     <div class="content">
 
         <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header card-header-primary">
-                                <h4 class="card-title ">{{ __('News') }}</h4>
-                                <p class="card-category"> {{ __('ระบบเซียน') }}</p>
-                            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h4 class="card-title ">{{ __('News') }}</h4>
+                            <p class="card-category"> {{ __('ระบบเซียน') }}</p>
+                        </div>
 
-                            <div class="card-body">
-                                @if(count($errors)>0)
-                                    @foreach($errors->all() as $error)
-
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="alert alert-danger">
-                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                    <i class="material-icons">close</i>
-                                                </button>
-                                                <strong>Oh snap!!</strong> &nbsp; &nbsp;<span>{{$error}}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    @endforeach
-                                @endif
-                                @if(session('success'))
-
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="alert alert-warning">
-                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                <i class="material-icons">close</i>
-                                            </button>
-                                            <strong>Well done! </strong> &nbsp; &nbsp; <span>{{session('success')}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                @endif
-                                @if(session('error'))
+                        <div class="card-body">
+                            @if(count($errors)>0)
+                                @foreach($errors->all() as $error)
 
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -52,30 +23,59 @@
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                                 <i class="material-icons">close</i>
                                             </button>
-                                            <strong>Oh snap!!</strong> &nbsp; &nbsp;<span>{{session('error')}}</span>
+                                            <strong>Oh snap!!</strong> &nbsp; &nbsp;<span>{{$error}}</span>
                                         </div>
                                     </div>
                                 </div>
+
+                                @endforeach
+                            @endif
+                            @if(session('success'))
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="alert alert-warning">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <i class="material-icons">close</i>
+                                        </button>
+                                        <strong>Well done! </strong> &nbsp; &nbsp; <span>{{session('success')}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            @endif
+                            @if(session('error'))
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="alert alert-danger">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <i class="material-icons">close</i>
+                                        </button>
+                                        <strong>Oh snap!!</strong> &nbsp; &nbsp;<span>{{session('error')}}</span>
+                                    </div>
+                                </div>
+                            </div>
     
-                                @endif
+                            @endif
 
 
-                                <script>
-                                    window.onload = function() {
-                                        if (window.jQuery) {  
-                                            bsCustomFileInput.init();
+                            <script>
+                                window.onload = function() {
+                                    if (window.jQuery) {  
+                                        bsCustomFileInput.init();
+                                        $("#addBlog").hide();
+                                        $('#addButton').click(function(){
+                                            $("#addBlog").show();
+                                            $("#listBlog").hide();
+                                        });
+                                        $('#cancelButton').click(function(){
                                             $("#addBlog").hide();
-                                            $('#addButton').click(function(){
-                                                $("#addBlog").show();
-                                                $("#listBlog").hide();
-                                            });
-                                            $('#cancelButton').click(function(){
-                                                $("#addBlog").hide();
-                                                $("#listBlog").show();
-                                            });        
-                                        } 
-                                    }
-                                </script>
+                                            $("#listBlog").show();
+                                        });        
+                                    } 
+                                }
+                            </script>
 
 
                                             
@@ -87,7 +87,7 @@
             <table class="table table-hover">
                 <thead class=" text-primary">
                     <th>ไอดี</th>
-                    <th>ระหว่างทีม</th>
+                    <th>การแข่งขันระหว่าง</th>
                     <th>วันที่</th>
                     <th>โพส์ตโดย</th>
                     <th class=" text-center">ออนไลน์</th>
@@ -98,9 +98,7 @@
             @if(!count($zeans))
         
             <tr>
-                <td colspan="5" class="text-center">
-                ยังไม่มีข้อมูลในฐานข้อมูล.
-                </td>
+                <td colspan="5" class="text-center">ยังไม่มีข้อมูลในฐานข้อมูล.</td>
             </tr>
             @else                    
                 @foreach($zeans as $z) 

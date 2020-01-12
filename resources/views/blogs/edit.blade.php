@@ -59,7 +59,9 @@
                 <label class="col-sm-1 col-form-label mt-2" for="title">รูปภาพ</label>
                 <div class="col-sm-7">    
                     @if($blog->image) 
-                    <img src="{{url('imgs/'.$blog->image)}}" alt="{{$blog->title}}" width="250px">
+                    <div style="display: block; height: 150px; width: 250px;">
+                        <img src="{{url('imgs/'.$blog->image)}}" alt="{{$blog->title}}" style="height: 100%; width: 100%; object-fit: cover;">
+                    </div>
                     @endif
                     <div class="custom-file mt-3">
                         <input type="file" name="image" style="cursor: pointer;" class="custom-file-input" id="customFile">
