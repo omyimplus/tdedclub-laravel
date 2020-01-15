@@ -1,11 +1,11 @@
-<div class="sidebar" data-color="orange" data-background-color="white" data-image="{{ asset('material') }}/img/sidebar-1.jpg">
+<div class="sidebar" data-color="orange" data-background-color="black" data-image="{{ asset('material') }}/img/sidebar-1.jpg">
   <!--
       Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
       Tip 2: you can also add an image using data-image tag
   -->
   <div class="logo">
-    <a href="https://creative-tim.com/" class="simple-text logo-normal">
+    <a href="#" class="simple-text logo-normal">
       {{ __('Creative Tim') }}
     </a>
   </div>
@@ -26,6 +26,30 @@
         </a>
         <div class="collapse show" id="laravelExample">
           <ul class="nav">
+            <li class="nav-item{{ $activePage == 'blogs' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ url('/blogs') }}">
+                    <span class="sidebar-mini"> <i class="fas fa-rss text-danger"></i> </span>
+                    <span class="sidebar-normal">{{ __('ข่าวกีฬา') }} </span>
+                </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'analyze' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ url('/analyze') }}">
+                    <span class="sidebar-mini"> <i class="fas fa-volleyball-ball text-danger"></i> </span>
+                    <span class="sidebar-normal">{{ __('บทวิเคราะห์') }} </span>
+                </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'youtube' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ url('/youtube') }}">
+                    <span class="sidebar-mini"> <i class="fab fa-youtube text-danger"></i> </span>
+                    <span class="sidebar-normal">{{ __('คลิปยูทูป') }} </span>
+                </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'zean' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ url('/zean') }}">
+                    <span class="sidebar-mini"> <i class="fab fa-font-awesome text-danger"></i> </span>
+                    <span class="sidebar-normal">{{ __('เซียนฟันธง') }} </span>
+                </a>
+            </li>
             <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('profile.edit') }}">
                 <span class="sidebar-mini"> UP </span>
@@ -77,12 +101,12 @@
           <p>{{ __('RTL Support') }}</p>
         </a>
       </li>
-      <li class="nav-item active-pro{{ $activePage == 'upgrade' ? ' active' : '' }}">
+      {{-- <li class="nav-item active-pro{{ $activePage == 'upgrade' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('upgrade') }}">
           <i class="material-icons">unarchive</i>
           <p>{{ __('Upgrade to PRO') }}</p>
         </a>
-      </li>
+      </li> --}}
     </ul>
   </div>
 </div>
