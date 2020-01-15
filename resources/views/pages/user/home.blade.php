@@ -39,11 +39,41 @@
     <div class="container bg-black">
         <div class="row">
                 <div class="col-4">
-                    <div class="row">
-                        <div class="col">
-                            <a href="#"><img class="banner-auto" src="/images/bn-2.jpg" alt=""></a>
+                    <a href="#"><h4>รายการถ่ายทอดสด</h4></a>
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="#"><img src="/images/bn-chanal.png" alt=""></a>
+                            </div>
+                            <div class="col-4">
+                                    <a href="#"><img src="/images/bn-chanal.png" alt=""></a>
+                            </div>
+                            <div class="col-4">
+                                    <a href="#"><img src="/images/bn-chanal.png" alt=""></a>
+                            </div>
+                            <div class="col-4">
+                                    <a href="#"><img src="/images/bn-chanal.png" alt=""></a>
+                            </div>
+                            <div class="col-4">
+                                    <a href="#"><img src="/images/bn-chanal.png" alt=""></a>
+                            </div>
+                            <div class="col-4">
+                                    <a href="#"><img src="/images/bn-chanal.png" alt=""></a>
+                            </div>
+                            <div class="col-4">
+                                    <a href="#"><img src="/images/bn-chanal.png" alt=""></a>
+                            </div>
+                            <div class="col-4">
+                                    <a href="#"><img src="/images/bn-chanal.png" alt=""></a>
+                            </div>
+                            <div class="col-4">
+                                    <a href="#"><img src="/images/bn-chanal.png" alt=""></a>
+                            </div>
                         </div>
-                    </div>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#"><img class="banner-auto" src="/images/bn-2.jpg" alt=""></a>
+                                </div>
+                            </div>
                 </div>
                         <div class="col-8">
                             <img class="img-doball" src="/images/bg-channal.jpg" alt="">
@@ -77,7 +107,7 @@
 
 {{-- <หน้าคอนเท้> --}}
         <div class="row">
-            <div class="col-md-8 col-xs-12">
+            <div class="col-8">
                 <a href="#" class="imageMain">
                     <section>
                         <img class="img-fluid" src="images/news-1.jpg" alt="">
@@ -88,7 +118,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4 col-xs-12">
+            <div class="col-4">
                 <a href="#" class="row mb-2 homeListnews">
                     <div class="col-4 px-0">
                         <div class="imageContent"><img class="img" src="images/news-2.jpg" alt=""></div>
@@ -162,6 +192,44 @@
 <div class="zean">
     <div class="container bg-black py-1">
         <div class="row">
+            <div class="col-6 pb-2">
+                <div class="row">
+                    <div class="col-4">
+                        <a href="#">
+                            <img src="images/zean1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="#">
+                            <img src="images/zean1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="#">
+                            <img src="images/zean1.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-4">
+                        <a href="#">
+                            <img src="images/zean1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="#">
+                            <img src="images/zean1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="#">
+                            <img src="images/zean1.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div class="col-12">
                 <h2>ทรรศนะบอล ทีเด็ดบอล บ้านผลบอล</h2>
                     <p>ทรรศนะบอลวันนี้ วิเคราะห์บอลวันนี้ ทรรศนะเซียนบอล ทีเด็ดบอล ทีเด็ดบอลรายวัน ทีเด็ดบอลวันนี้ บอลเต็ง บอลสเต็ป บ้านผลบอล ทีเด็ดบอลเต็ง ทีเด็ดบอลเดี่ยว วิเคราะห์บอลทุกคู่ วิเคราะห์บอลทุกลีก ทรรศนะเซียนบอลวันนี้ ทีเด็ดบอลวันนี้ แหล่งรวมเซียนบอล ผลบอล วิเคราะห์บอลสุดแม่น ราคาบอล ทีเด็ดฟุตบอล ทีเด็ดบอลวันนี้ โปรแกรมบอลวันนี้</p>
@@ -256,15 +324,18 @@
 </div>
 {{-- <วิเคราะห์บอล> --}}
 
-{{-- <แถบทีเด็ดเซียน> --}}
-<div id="tded-zean">
+{{-- <แถบไฮไลท์บอล> --}}
+<div id="้high-light">
     <div class="container bg-black">
         <div class="row">
             <div class="col-12">
                 <div class="title">
                     <div class="row">
-                        <div class="col-12 texthead">
-                            <h1>ทีเด็ดสเต็ป วันที่ 9 มกราคม 2563</h1>
+                        <div class="col-10">
+                            <h1>ไฮไลท์บอลวันนี้</h1>
+                        </div>
+                        <div class="col-2">
+                            <a href="#">ดูทั้งหมด</a>
                         </div>
                     </div>
                 </div>
@@ -272,112 +343,92 @@
         </div>
     </div>
 </div>
-{{-- <แถบทีเด็ดเซียน> --}}
+{{-- <แถบไฮไลท์บอล> --}}
 
-{{-- <ทีเด็ดเซียน> --}}
-<div id="zeantded">
+{{-- <ไฮไลท์บอล> --}}
+<div class="highlight">
     <div class="container bg-black">
         <div class="row">
-            <div class="col-3 py-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                </div>
-            </div>
-
-            <div class="col-3 py-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
+            <div class="col-3">
+                <div class="img-highlight">
+                    <a href="#">
+                        <img src="/images/highlight.png" alt="Snow" style="width:100%">
+                            <button class="btn"><i class="fas fa-play fa-3x"></i></button>
+                        <p>Highlight football 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล
+                            Highlight football 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล
+                            Highlight football 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล
+                            Highlight football 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล
+                        </p>
+                    </a>
                 </div>
             </div>
-
-            <div class="col-3 py-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
+            <div class="col-3">
+                <div class="img-highlight">
+                    <a href="#">
+                        <img src="/images/highlight.png" alt="Snow" style="width:100%">
+                            <button class="btn"><i class="fas fa-play fa-3x"></i></button>
+                        <p>Highlight football 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
+                    </a>
                 </div>
             </div>
-
-            <div class="col-3 py-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
+            <div class="col-3">
+                <div class="img-highlight">
+                    <a href="#">
+                        <img src="/images/highlight.png" alt="Snow" style="width:100%">
+                            <button class="btn"><i class="fas fa-play fa-3x"></i></button>
+                        <p>Highlight football 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
+                    </a>
                 </div>
             </div>
-
-            <div class="col-3 pb-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
+            <div class="col-3">
+                <div class="img-highlight">
+                    <a href="#">
+                        <img src="/images/highlight.png" alt="Snow" style="width:100%">
+                            <button class="btn"><i class="fas fa-play fa-3x"></i></button>
+                        <p>Highlight football 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
+                    </a>
                 </div>
             </div>
-
-            <div class="col-3 pb-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
+            <div class="col-3">
+                <div class="img-highlight">
+                    <a href="#">
+                        <img src="/images/highlight.png" alt="Snow" style="width:100%">
+                            <button class="btn"><i class="fas fa-play fa-3x"></i></button>
+                        <p>Highlight football 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
+                    </a>
                 </div>
             </div>
-
-            <div class="col-3 pb-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
+            <div class="col-3">
+                <div class="img-highlight">
+                    <a href="#">
+                        <img src="/images/highlight.png" alt="Snow" style="width:100%">
+                            <button class="btn"><i class="fas fa-play fa-3x"></i></button>
+                        <p>Highlight football 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
+                    </a>
                 </div>
             </div>
-
-            <div class="col-3 pb-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
+            <div class="col-3">
+                <div class="img-highlight">
+                    <a href="#">
+                        <img src="/images/highlight.png" alt="Snow" style="width:100%">
+                            <button class="btn"><i class="fas fa-play fa-3x"></i></button>
+                        <p>Highlight football 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
+                    </a>
                 </div>
             </div>
-
+            <div class="col-3">
+                <div class="img-highlight">
+                    <a href="#">
+                        <img src="/images/highlight.png" alt="Snow" style="width:100%">
+                            <button class="btn"><i class="fas fa-play fa-3x"></i></button>
+                        <p>Highlight football 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-{{-- <ทีเด็ดเซียน> --}}
+{{-- <ไฮไลท์บอล> --}}
 
 {{-- { แถบบอล api } --}}
 <div id="api-ball">
