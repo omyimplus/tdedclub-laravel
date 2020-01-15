@@ -236,8 +236,12 @@ footer .footer-copyright {
     width: 100%;
     height: auto; }
   #doball .banner-auto {
+<<<<<<< HEAD
     width: 100%;
     height: auto; }
+=======
+    width: 100%; }
+>>>>>>> 46b7856a6a0ecbcbf0aa3f5b9fa3795d101594c9
 
 #tded-zean .texthead h1 {
   text-align: center; }

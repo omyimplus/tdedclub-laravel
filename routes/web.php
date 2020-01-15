@@ -33,10 +33,13 @@ Route::get('/vicrow', function () {
 
 Route::get('/highlight', function () {
     return view('pages.user.highlight');
+<<<<<<< HEAD
 });
 
 Route::get('/admin', function () {
     return redirect()->guest('login');
+=======
+>>>>>>> 46b7856a6a0ecbcbf0aa3f5b9fa3795d101594c9
 });
 
 Auth::routes();
@@ -80,7 +83,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('blogs', 'BlogController', ['except' => ['show']]);
     Route::resource('youtube', 'YoutubeController', ['except' => ['show']]);
     Route::resource('analyze', 'AnalyzeController', ['except' => ['show']]);
-    Route::resource('zean', 'ZeanController', ['except' => ['show']]);    
+    Route::resource('zean', 'ZeanController', ['except' => ['show']]);
     Route::resource('user', 'UserController', ['except' => ['show']]);
     Route::resource('setup', 'SetupController', ['except' => ['show']]);
 
