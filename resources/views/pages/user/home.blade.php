@@ -1,5 +1,5 @@
 @extends('layouts.main')
-
+{{-- eiei --}}
 @section('content')
 
 <div class="banner-1">
