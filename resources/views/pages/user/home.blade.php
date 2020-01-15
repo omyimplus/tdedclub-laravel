@@ -6,11 +6,7 @@
     <div class="container bg-black">
         <div class="row">
             <div class="col">
-<<<<<<< HEAD
                 <a href="#"><img src="/images/bn7m.gif" alt=""></a>
-=======
-                <a href="#"><img src="/images/bn-1.gif" alt=""></a>
->>>>>>> 46b7856a6a0ecbcbf0aa3f5b9fa3795d101594c9
             </div>
         </div>
     </div>
@@ -44,79 +40,19 @@
         <div class="row">
                 <div class="col-4">
                     <div class="row">
-<<<<<<< HEAD
                         <div class="col">
                             <a href="#"><img class="banner-auto" src="/images/bn-2.jpg" alt=""></a>
                         </div>
                     </div>
-=======
-                        <div class="col pt-2">
-                            <div class="img-logo">
-                                <img src="/images/logo-online.png" alt="">
-                            </div>
-                            <div class="panel panel-info" >
-                                <p class="text-center" style="font-size: 30px; margin: 0;"> สมัครสมาชิกผ่านหน้าเว็บ</p>
-                            <div class="panel-body" >
-                                <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-                                    <form name="line-notify" class="form-horizontal" role="form" action="{{url('/api/line')}}" method="post">
-                                    <div class="input-group" style="margin-bottom: 10px">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">
-                                            <span class="fa fa-user text-primary"></span>
-                                            </span>
-                                        </div>
-                                        <input name="fullname" id="fullname" type="text" class="form-control" value="" placeholder="ชื่อ - นามสกุล" required>
-                                    </div>
-                                    <div class="input-group" style="margin-bottom: 10px">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">
-                                                <span class="fas fa-mobile"></span>
-                                            </span>
-                                        </div>
-                                        <input name="phone" id="phone" type="text" class="form-control" maxlength="10" placeholder="เบอร์โทรศัพท์" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" required>
-                                    </div>
-                                    <div class="input-group" style="margin-bottom: 10px">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">
-                                                <span class="fab fa-line text-success"></span>
-                                            </span>
-                                        </div>
-                                        <input name="lineid" id="lineid" type="text" class="form-control" placeholder="lineID" required>
-                                    </div>
-                                    <div style="margin-top:10px" class="form-group">
-                                        <div class="col-sm-12 col-md-12 col-xs-12 p-0">
-                                            <button class="btn text-white" style="font-size:17px; background-color:#00c200; width:100%;" name="submit" type="submit">ยืนยันข้อมูลการสมัคร</button>
-                                        </div>
-                                    </div>
-                                    </form>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                        <div class="row">
-                            <div class="col">
-                                <a href="#"><img class="banner-auto" src="/images/promotion-1.jpg" alt=""></a>
-                            </div>
-                        </div>
->>>>>>> 46b7856a6a0ecbcbf0aa3f5b9fa3795d101594c9
                 </div>
                         <div class="col-8">
                             <img class="img-doball" src="/images/bg-channal.jpg" alt="">
                                 <img class="leauge" src="/images/bn-leauge.png" alt="">
                         </div>
-<<<<<<< HEAD
                 </div>
         </div>
     </div>
 </div>
-=======
-        </div>
-    </div>
-</div>
-
->>>>>>> 46b7856a6a0ecbcbf0aa3f5b9fa3795d101594c9
 {{-- <ช่องดูบอลออนไลน์> --}}
 
 
@@ -223,7 +159,6 @@
 </div>
 {{-- <ช่องยูทูป> --}}
 
-<<<<<<< HEAD
 <div class="zean">
     <div class="container bg-black py-1">
         <div class="row">
@@ -235,8 +170,6 @@
     </div>
 </div>
 
-=======
->>>>>>> 46b7856a6a0ecbcbf0aa3f5b9fa3795d101594c9
 {{-- <แถบวิเคราะห์บอล> --}}
 <div id="analyze-ball">
     <div class="container bg-black">
@@ -446,20 +379,6 @@
 </div>
 {{-- <ทีเด็ดเซียน> --}}
 
-<<<<<<< HEAD
-=======
-<div class="zean">
-    <div class="container bg-black py-1">
-        <div class="row">
-            <div class="col-12">
-                <h2>ทรรศนะบอล ทีเด็ดบอล บ้านผลบอล</h2>
-                    <p>ทรรศนะบอลวันนี้ วิเคราะห์บอลวันนี้ ทรรศนะเซียนบอล ทีเด็ดบอล ทีเด็ดบอลรายวัน ทีเด็ดบอลวันนี้ บอลเต็ง บอลสเต็ป บ้านผลบอล ทีเด็ดบอลเต็ง ทีเด็ดบอลเดี่ยว วิเคราะห์บอลทุกคู่ วิเคราะห์บอลทุกลีก ทรรศนะเซียนบอลวันนี้ ทีเด็ดบอลวันนี้ แหล่งรวมเซียนบอล ผลบอล วิเคราะห์บอลสุดแม่น ราคาบอล ทีเด็ดฟุตบอล ทีเด็ดบอลวันนี้ โปรแกรมบอลวันนี้</p>
-            </div>
-        </div>
-    </div>
-</div>
-
->>>>>>> 46b7856a6a0ecbcbf0aa3f5b9fa3795d101594c9
 {{-- { แถบบอล api } --}}
 <div id="api-ball">
     <div class="container bg-black">
@@ -494,11 +413,7 @@
 </div>
 {{-- { ช่องวาง api } --}}
 
-<<<<<<< HEAD
 <div class="banner-1 pb-2">
-=======
-<div class="banner-1">
->>>>>>> 46b7856a6a0ecbcbf0aa3f5b9fa3795d101594c9
     <div class="container bg-black">
         <div class="row">
             <div class="col">
