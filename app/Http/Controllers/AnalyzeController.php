@@ -103,14 +103,18 @@ class AnalyzeController extends Controller
         $as->updated_at = date('Y-m-d H:i:s');
         $as->visit = ($as->visit == '')?0:$as->visit;
         $as->clip = ($request->input('clip')!=null) ? getYoutube($request->input('clip')):null;
+        
+
         if (isset($fileNameToStore)) {
             if (!empty($as->image)) {
                 $cover_path  = str_replace('/','\\',public_path('imgs/'.$as->image));
-                if (!file_exists($cover_path)) unlink($cover_path);                
+                if (!file_exists($cover_path)) unlink($cover_path);
+                $as->image = $fileNameToStore;           
             }
             else $as->image = $fileNameToStore;
         }
         $as->save();
+        dd($fileNameToStore);
         return redirect('/analyze')->with('success','Success! Analyze id #'.$id.' has been updated.');
     }
 

@@ -127,59 +127,28 @@
             <div class="col-lg-8 mb-4 mb-lg-0">
                 <a href="#" class="imageMain">
                     <section>
-                        <img class="img-fluid" src="images/news-1.jpg" alt="">
+                        <img class="img-fluid" src="{{url('imgs/'.$last_news->image)}}" alt="">
                     </section>
-                    <div class="content">
-                        <h5 class="px-3">เป๊ป กวาร์ดิโอล่า กู เทรนเนอร์แมนเชสเตอร์ ซิตี้ ลดความกดดันโดยชี้ว่าทีมยังไม่อาจ</h5>
-                        <p class="px-3">"เรือใบ" พ่ายคารังให้กับ แมนเชสเตอร์ ยูไนเต็ด 1-2 ในเกมลีกนัดล่าสุด ทำให้ทีมมีแต้มตามหลัง "หงส์แดง" ทีมจ่าฝูงไกล 14 คะแนนแล้ว ซึ่งแม้ว่าทีมจะคว้าแชมป์พรีเมียร์ลีกมาสองปีติดต่อกันแต่ทางนายใหญ่ชาวสเปนชี้ว่าทีมยังไม่อาจเทียบกับเหล่ายักษ์ใหญ่ในยุโรป</p>
+                    <div class="content">                      
+                        <h5 class="px-3">{{$last_news->title}}</h5>
+                        <p class="px-3">{{$last_news->description}}</p>
                     </div>
                 </a>
             </div>
             <div class="col-lg-4">
+                @foreach($news as $n)
                 <a href="#" class="row mb-2 homeListnews">
                     <div class="col-4 px-lg-0">
-                        <div class="imageContent"><img class="img" src="images/news-2.jpg" alt=""></div>
+                        <div class="imageContent"><img class="img" src="{{url('imgs/'.$n->image)}}" alt=""></div>
                     </div>
                     <div class="col-8 pl-0">
                         <div class="content">
-                            <h2>เป๊ป กวาร์ดิโอล่า กู เทรนเนอร์แมนเชสเตอร์ ซิตี้ ลดความกดดันโดยชี้ว่าทีมยังไม่อาจ</h2>
-                            <p>มิโน่ ไรโอล่า เอเย่นต์คนดังเผยยังไม่ชัวร์ว่า ซลาตัน อิบราฮิโมวิชดาวยิงตัวเก๋า มิโน่ ไรโอล่า เอเย่นต์คนดังเผยยังไม่ชัวร์ว่า ซลาตัน อิบราฮิโมวิชดาวยิงตัวเก๋า</p>
+                            <h2>{{$n->title}}</h2>
+                            <p>{{$n->description}}</p>
                         </div>
                     </div>
                 </a>
-                <a href="#" class="row mb-2 homeListnews">
-                    <div class="col-4 px-lg-0">
-                        <div class="imageContent"><img class="img" src="images/news-2.jpg" alt=""></div>
-                    </div>
-                    <div class="col-8 pl-0">
-                        <div class="content">
-                            <h2>เป๊ป กวาร์ดิโอล่า กู เทรนเนอร์แมนเชสเตอร์ ซิตี้ ลดความกดดันโดยชี้ว่าทีมยังไม่อาจ</h2>
-                            <p>มิโน่ ไรโอล่า เอเย่นต์คนดังเผยยังไม่ชัวร์ว่า ซลาตัน อิบราฮิโมวิชดาวยิงตัวเก๋า มิโน่ ไรโอล่า เอเย่นต์คนดังเผยยังไม่ชัวร์ว่า ซลาตัน อิบราฮิโมวิชดาวยิงตัวเก๋า</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="row mb-2 homeListnews">
-                    <div class="col-4 px-lg-0">
-                        <div class="imageContent"><img class="img" src="images/news-2.jpg" alt=""></div>
-                    </div>
-                    <div class="col-8 pl-0">
-                        <div class="content">
-                            <h2>เป๊ป กวาร์ดิโอล่า กู เทรนเนอร์แมนเชสเตอร์ ซิตี้ ลดความกดดันโดยชี้ว่าทีมยังไม่อาจ</h2>
-                            <p>มิโน่ ไรโอล่า เอเย่นต์คนดังเผยยังไม่ชัวร์ว่า ซลาตัน อิบราฮิโมวิชดาวยิงตัวเก๋า มิโน่ ไรโอล่า เอเย่นต์คนดังเผยยังไม่ชัวร์ว่า ซลาตัน อิบราฮิโมวิชดาวยิงตัวเก๋า</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="row mb-2 homeListnews">
-                    <div class="col-4 px-lg-0">
-                        <div class="imageContent"><img class="img" src="images/news-2.jpg" alt=""></div>
-                    </div>
-                    <div class="col-8 pl-0">
-                        <div class="content">
-                            <h2>เป๊ป กวาร์ดิโอล่า กู เทรนเนอร์แมนเชสเตอร์ ซิตี้ ลดความกดดันโดยชี้ว่าทีมยังไม่อาจ</h2>
-                            <p>มิโน่ ไรโอล่า เอเย่นต์คนดังเผยยังไม่ชัวร์ว่า ซลาตัน อิบราฮิโมวิชดาวยิงตัวเก๋า มิโน่ ไรโอล่า เอเย่นต์คนดังเผยยังไม่ชัวร์ว่า ซลาตัน อิบราฮิโมวิชดาวยิงตัวเก๋า</p>
-                        </div>
-                    </div>
-                </a>
+                @endforeach
             </div>
         </div>
     </div>
@@ -245,7 +214,17 @@
        <div class="row">
             <div class="col-12 pb-2">
                 <div class="row">
+                    @foreach($analyzes as $an)
                     <div class="col-6 col-lg-4">
+                        <a href="#">
+                            <div class="img-zoom">
+                                <img src="{{url('imgs/'.$an->image)}}" class="img-fluid" alt="">
+                            </div>
+                            <p>{{$an->title}}</p>
+                        </a>
+                    </div>
+                    @endforeach
+                    {{-- <div class="col-6 col-lg-4">
                         <a href="#">
                             <div class="img-zoom">
                                 <img src="images/tdedclub.jpg" class="img-fluid" alt="">
@@ -296,7 +275,7 @@
                                 วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล
                             </p>
                         </a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

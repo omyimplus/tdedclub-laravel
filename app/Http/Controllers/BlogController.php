@@ -9,6 +9,7 @@ class BlogController extends Controller
 {
     public function index(Blog $model)
     {
+        $model->orderBy('id','desc')->paginate(20);
         return view('blogs.index', ['blogs' => $model->orderBy('id','desc')->paginate(20)]);
     }
 

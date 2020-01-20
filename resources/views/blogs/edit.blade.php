@@ -42,7 +42,7 @@
                 <div class="col-sm-7">
                     <div class="form-group">
                         <textarea class="form-control" name="content" id="ckeditor" required="" oninvalid="this.setCustomValidity('Content is require.')"
-                        oninput="setCustomValidity('')">{!!$blog->content!!}</textarea>           
+                        oninput="setCustomValidity('')">{!!$blog->content!!}</textarea>            
                     </div>
                 </div>
             </div>        

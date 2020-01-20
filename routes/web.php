@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.user.home');
-});
+Route::get('/', 'FrontController@index');
 
 Route::get('/live', function () {
     return view('pages.user.live');
