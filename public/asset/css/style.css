@@ -114,20 +114,31 @@ main .vicrow-page .int-link li {
 main .vicrow-page .int-link ul {
   margin: 0;
   padding: 0; }
+main .vicrow-page .int-link .interest span {
+  font-size: 14px; }
 
 footer .footer-copyright {
   background: #240000; }
+  footer .footer-copyright span {
+    font-size: 18px; }
+  footer .footer-copyright i {
+    font-size: 25px;
+    padding: 0px 2px; }
 
 #footer {
   background-color: #181818;
   border-top: #b40000 solid 3px; }
+  #footer a {
+    text-decoration: none;
+    color: #b40000; }
+    #footer a:hover {
+      color: #fff; }
   #footer img {
     width: 170px;
     height: auto; }
   #footer p {
     padding: 15px 10px 0px 0px;
-    border-right: #fff solid 2px;
-    font-size: 16px; }
+    font-size: 15px; }
   #footer .img-social {
     display: block;
     display: inline-block;
@@ -156,6 +167,11 @@ footer .footer-copyright {
 .banner-1 img {
   width: 100%;
   height: auto; }
+
+.zean img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px; }
 
 #home .homeListnews {
   text-decoration: none; }
@@ -285,9 +301,9 @@ footer .footer-copyright {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  display: none;
-  background-color: orangered;
-  color: #fff; }
+  display: none; }
+  .back-to-top i {
+    color: #fff; }
 
 #sidebar-scroll {
   position: -webkit-sticky;
@@ -326,4 +342,119 @@ footer .footer-copyright {
         font-size: 0.8em;
         overflow: hidden;
         height: 38px;
-        text-indent: 30px; } }
+        text-indent: 30px; }
+
+  .header .logo img {
+    width: 145px;
+    height: auto; }
+
+  .main-menu .nav-item a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block; }
+    .main-menu .nav-item a span {
+      color: #fff;
+      font-size: 30px;
+      text-align: center; }
+    .main-menu .nav-item a:after {
+      display: none; }
+    .main-menu .nav-item a:hover {
+      color: #b40000;
+      background-color: #000; }
+    .main-menu .nav-item a:hover:after {
+      display: none; }
+
+  .title h1 {
+    font-size: 1.1em; } }
+@media (max-width: 768px) and (max-width: 991px) {
+  .header .logo img {
+    width: 145px;
+    height: auto; }
+
+  .main-menu .nav-item a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block; }
+    .main-menu .nav-item a span {
+      color: #fff;
+      font-size: 18px;
+      display: block;
+      text-align: center;
+      padding: 2px 0px; }
+      .main-menu .nav-item a span:hover {
+        color: #b40000; }
+    .main-menu .nav-item a:after {
+      display: none; }
+    .main-menu .nav-item a:hover {
+      text-decoration: none; }
+    .main-menu .nav-item a:hover:after {
+      transform: none; }
+    .main-menu .nav-item a .active {
+      color: #b40000; }
+  .main-menu .social a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    float: right; }
+    .main-menu .social a:hover {
+      color: #b40000; }
+    .main-menu .social a:after {
+      display: none; }
+    .main-menu .social a i {
+      font-size: 25px; }
+
+  .title h1 {
+    font-size: 1.1em; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  #footer p {
+    font-size: 12px; }
+
+  #vicrow p {
+    font-size: 14px;
+    height: 42px; }
+
+  .header .logo img {
+    width: 145px;
+    height: auto; }
+
+  .main-menu .nav-item a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block; }
+    .main-menu .nav-item a span {
+      color: #fff;
+      font-size: 18px;
+      display: block;
+      text-align: center;
+      padding: 2px 0px; }
+      .main-menu .nav-item a span:hover {
+        color: #b40000; }
+    .main-menu .nav-item a:after {
+      display: none; }
+    .main-menu .nav-item a:hover {
+      text-decoration: none; }
+    .main-menu .nav-item a:hover:after {
+      transform: none; }
+    .main-menu .nav-item a .active {
+      color: #b40000; }
+  .main-menu .social a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    float: right; }
+    .main-menu .social a:hover {
+      color: #b40000; }
+    .main-menu .social a:after {
+      display: none; }
+    .main-menu .social a i {
+      font-size: 25px; }
+
+  .title h1 {
+    font-size: 1.1em; } }
+@media (min-width: 992px) and (max-width: 1200px) {
+  .header .logo img {
+    width: 110px; }
+  .header .main-menu a span {
+    font-size: 15px; }
+  .header .nav-item {
+    padding: 0 10px; } }

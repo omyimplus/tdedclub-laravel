@@ -3,7 +3,7 @@
 @section('content')
 <div class="zean1">
     <div class="container bg-black py-2">
-        <h3>ข่าวฟุตบอลประจำวัน</h3>
+        <h3>ทีเด็ดบอลเดี่ยว</h3>
             <p><i class="fas fa-home"></i><a href="#"> <span>หน้าแรก</span></a>
                 <i class="fas fa-angle-right"></i> <span>ทีเด็ดบอล ทรรศนะบอล</span></p>
         <div class="row">

@@ -6,7 +6,7 @@
     <div class="container bg-black">
         <div class="row">
             <div class="col">
-                <a href="#"><img src="/images/bn7m.gif" alt=""></a>
+                <a href="https://www.mm88online.com/"><img src="/images/bn-1.gif" alt=""></a>
             </div>
         </div>
     </div>
@@ -19,11 +19,11 @@
             <div class="col-12">
                 <div class="title">
                     <div class="row">
-                        <div class="col-10">
+                        <div class="col-8 col-lg-10">
                             <h1>ดูบอลออนไลน์ฟรี</h1>
                         </div>
-                        <div class="col-2">
-                            <a href="#">ดูทั้งหมด</a>
+                        <div class="col-4 col-lg-2">
+                            <a href="/live">ดูทั้งหมด</a>
                         </div>
                     </div>
                 </div>
@@ -38,11 +38,58 @@
 <div id="doball">
     <div class="container bg-black">
         <div class="row">
-                <div class="col-4">
+                <div class="col-12 col-lg-4">
                     <div class="row">
-                        <div class="col">
-                            <a href="#"><img class="banner-auto" src="/images/bn-2.jpg" alt=""></a>
+                        <div class="col-12">
+                            <div class="rounded mt-2">
+
+                                <div class="panel panel-info" >
+                                   <div class="panel-heading">
+                                   <div>
+                                      <img src="/images/logo-online.png" alt="" width="100%">
+                                   </div>
+                                      <h3 class="text-center"> สมัครสมาชิกผ่านหน้าเว็บ</h3>
+                                   </div>
+                                   <div class="panel-body" >
+                                      <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                                         <form name="line-notify" class="form-horizontal" role="form" action="{{url('/api/line')}}" method="post">
+                                            <div class="input-group" style="margin-bottom: 10px">
+                                               <div class="input-group-prepend">
+                                                  <span class="input-group-text">
+                                                  <span class="fa fa-user text-primary"></span>
+                                                  </span>
+                                               </div>
+                                               <input name="fullname" id="fullname" type="text" class="form-control" value="" placeholder="ชื่อ - นามสกุล" required>
+                                            </div>
+                                            <div class="input-group" style="margin-bottom: 10px">
+                                               <div class="input-group-prepend">
+                                                  <span class="input-group-text">
+                                                     <span class="fas fa-mobile"></span>
+                                                  </span>
+                                               </div>
+                                               <input name="phone" id="phone" type="text" class="form-control" maxlength="10" placeholder="เบอร์โทรศัพท์" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" required>
+                                            </div>
+                                            <div class="input-group" style="margin-bottom: 10px">
+                                               <div class="input-group-prepend">
+                                                  <span class="input-group-text">
+                                                     <span class="fab fa-line text-success"></span>
+                                                  </span>
+                                               </div>
+                                               <input name="lineid" id="lineid" type="text" class="form-control" placeholder="lineID" required>
+                                            </div>
+                                            <div class="form-group">
+                                               <div class="col-sm-12 col-md-12 col-xs-12 p-0">
+                                                  <button class="btn text-white" style="font-size:17px; background-color:#00c200; width:100%;" name="submit" type="submit">ยืนยันข้อมูลการสมัคร</button>
+                                               </div>
+                                            </div>
+                                         </form>
+                                      </div>
+                                   </div>
+                              </div>
                         </div>
+                            <div class="col">
+                                <a href="http://nav.cx/52dtFXm"><img class="banner-auto" src="/images/promotion-1.jpg" alt=""></a>
+                            </div>
                     </div>
                 </div>
                         <div class="col-8">
@@ -63,11 +110,11 @@
             <div class="col-12">
                 <div class="title">
                     <div class="row">
-                        <div class="col-10">
-                            <h1>ข่าวกีฬาประจำวัน</h1>
+                        <div class="col-8 col-lg-10">
+                            <h1>ข่าวฟุตบอลประจำวัน</h1>
                         </div>
-                        <div class="col-2">
-                            <a href="#">ดูทั้งหมด</a>
+                        <div class="col-4 col-lg-2">
+                            <a href="/review">ดูทั้งหมด</a>
                         </div>
                     </div>
                 </div>
@@ -76,8 +123,8 @@
 {{-- <แถบข่าวกีฬา> --}}
 
 {{-- <หน้าคอนเท้> --}}
-        <div class="row">
-            <div class="col-md-8 col-xs-12">
+        <div class="row py-4">
+            <div class="col-lg-8 mb-4 mb-lg-0">
                 <a href="#" class="imageMain">
                     <section>
                         <img class="img-fluid" src="images/news-1.jpg" alt="">
@@ -88,9 +135,9 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4 col-xs-12">
+            <div class="col-lg-4">
                 <a href="#" class="row mb-2 homeListnews">
-                    <div class="col-4 px-0">
+                    <div class="col-4 px-lg-0">
                         <div class="imageContent"><img class="img" src="images/news-2.jpg" alt=""></div>
                     </div>
                     <div class="col-8 pl-0">
@@ -101,7 +148,7 @@
                     </div>
                 </a>
                 <a href="#" class="row mb-2 homeListnews">
-                    <div class="col-4 px-0">
+                    <div class="col-4 px-lg-0">
                         <div class="imageContent"><img class="img" src="images/news-2.jpg" alt=""></div>
                     </div>
                     <div class="col-8 pl-0">
@@ -112,7 +159,7 @@
                     </div>
                 </a>
                 <a href="#" class="row mb-2 homeListnews">
-                    <div class="col-4 px-0">
+                    <div class="col-4 px-lg-0">
                         <div class="imageContent"><img class="img" src="images/news-2.jpg" alt=""></div>
                     </div>
                     <div class="col-8 pl-0">
@@ -123,7 +170,7 @@
                     </div>
                 </a>
                 <a href="#" class="row mb-2 homeListnews">
-                    <div class="col-4 px-0">
+                    <div class="col-4 px-lg-0">
                         <div class="imageContent"><img class="img" src="images/news-2.jpg" alt=""></div>
                     </div>
                     <div class="col-8 pl-0">
@@ -142,14 +189,14 @@
 
 {{-- <ช่องยูทูป> --}}
 <div id="youtube">
-    <div class="container bg-black pb-3">
+    <div class="container bg-black pb-2">
         <div class="row">
-            <div class="col-6 pr-1">
+            <div class="col-12 col-lg-6 pr-1">
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe src="https://www.youtube.com/embed/yfO65sfWQtc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="col-6 pl-1">
+            <div class="col-12 col-lg-6 pl-1">
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe src="https://www.youtube.com/embed/yfO65sfWQtc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
@@ -163,8 +210,9 @@
     <div class="container bg-black py-1">
         <div class="row">
             <div class="col-12">
-                <h2>ทรรศนะบอล ทีเด็ดบอล บ้านผลบอล</h2>
-                    <p>ทรรศนะบอลวันนี้ วิเคราะห์บอลวันนี้ ทรรศนะเซียนบอล ทีเด็ดบอล ทีเด็ดบอลรายวัน ทีเด็ดบอลวันนี้ บอลเต็ง บอลสเต็ป บ้านผลบอล ทีเด็ดบอลเต็ง ทีเด็ดบอลเดี่ยว วิเคราะห์บอลทุกคู่ วิเคราะห์บอลทุกลีก ทรรศนะเซียนบอลวันนี้ ทีเด็ดบอลวันนี้ แหล่งรวมเซียนบอล ผลบอล วิเคราะห์บอลสุดแม่น ราคาบอล ทีเด็ดฟุตบอล ทีเด็ดบอลวันนี้ โปรแกรมบอลวันนี้</p>
+                <a href="https://www.mm88online.com/"><img src="/images/bn-3.gif" alt=""></a>
+                    <h2>ทรรศนะบอล ทีเด็ดบอล บ้านผลบอล</h2>
+                        <p>ทรรศนะบอลวันนี้ วิเคราะห์บอลวันนี้ ทรรศนะเซียนบอล ทีเด็ดบอล ทีเด็ดบอลรายวัน ทีเด็ดบอลวันนี้ บอลเต็ง บอลสเต็ป บ้านผลบอล ทีเด็ดบอลเต็ง ทีเด็ดบอลเดี่ยว วิเคราะห์บอลทุกคู่ วิเคราะห์บอลทุกลีก ทรรศนะเซียนบอลวันนี้ ทีเด็ดบอลวันนี้ แหล่งรวมเซียนบอล ผลบอล วิเคราะห์บอลสุดแม่น ราคาบอล ทีเด็ดฟุตบอล ทีเด็ดบอลวันนี้ โปรแกรมบอลวันนี้</p>
             </div>
         </div>
     </div>
@@ -177,11 +225,11 @@
             <div class="col-12">
                 <div class="title">
                     <div class="row">
-                        <div class="col-10">
+                        <div class="col-8 col-lg-10">
                             <h1>วิเคราะห์บอลวันนี้</h1>
                         </div>
-                        <div class="col-2">
-                            <a href="#">ดูทั้งหมด</a>
+                        <div class="col-4 col-lg-2">
+                            <a href="/vicrow">ดูทั้งหมด</a>
                         </div>
                     </div>
                 </div>
@@ -193,54 +241,54 @@
 
 {{-- <วิเคราะห์บอล> --}}
 <div id="vicrow">
-    <div class="container bg-black">
+    <div class="container bg-black py-3">
        <div class="row">
             <div class="col-12 pb-2">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-6 col-lg-4">
                         <a href="#">
                             <div class="img-zoom">
-                                <img src="images/tdedclub.jpg" alt="">
+                                <img src="images/tdedclub.jpg" class="img-fluid" alt="">
                             </div>
                             <p>วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
                         </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-lg-4">
                         <a href="#">
                             <div class="img-zoom">
-                                <img src="images/tdedclub.jpg" alt="">
+                                <img src="images/tdedclub.jpg" class="img-fluid" alt="">
                             </div>
                             <p>วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
                         </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-lg-4">
                         <a href="#">
                             <div class="img-zoom">
-                                <img src="images/tdedclub.jpg" alt="">
+                                <img src="images/tdedclub.jpg" class="img-fluid" alt="">
                             </div>
                             <p>วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
                         </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-lg-4">
                         <a href="#">
                             <div class="img-zoom">
-                                <img src="images/tdedclub.jpg" alt="">
+                                <img src="images/tdedclub.jpg" class="img-fluid" alt="">
                             </div>
                             <p>วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
                         </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-lg-4">
                         <a href="#">
                             <div class="img-zoom">
-                                <img src="images/tdedclub.jpg" alt="">
+                                <img src="images/tdedclub.jpg" class="img-fluid" alt="">
                             </div>
                             <p>วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
                         </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-lg-4">
                         <a href="#">
                             <div class="img-zoom">
-                                <img src="images/tdedclub.jpg" alt="">
+                                <img src="images/tdedclub.jpg" class="img-fluid" alt="">
                             </div>
                             <p>วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล
                                 วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล
@@ -278,9 +326,9 @@
 <div id="zeantded">
     <div class="container bg-black">
         <div class="row">
-            <div class="col-3 py-2">
+            <div class="col-6 col-lg-3 py-2">
                 <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
+                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
                 <div class="tdedstep">
                     <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
@@ -290,9 +338,9 @@
                 </div>
             </div>
 
-            <div class="col-3 py-2">
+            <div class="col-6 col-lg-3 py-2">
                 <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
+                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
                 <div class="tdedstep">
                     <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
@@ -302,9 +350,9 @@
                 </div>
             </div>
 
-            <div class="col-3 py-2">
+            <div class="col-6 col-lg-3 py-2">
                 <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
+                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
                 <div class="tdedstep">
                     <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
@@ -314,9 +362,9 @@
                 </div>
             </div>
 
-            <div class="col-3 py-2">
+            <div class="col-6 col-lg-3 py-2">
                 <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
+                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
                 <div class="tdedstep">
                     <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
@@ -326,9 +374,9 @@
                 </div>
             </div>
 
-            <div class="col-3 pb-2">
+            <div class="col-6 col-lg-3 pb-2">
                 <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
+                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
                 <div class="tdedstep">
                     <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
@@ -338,9 +386,9 @@
                 </div>
             </div>
 
-            <div class="col-3 pb-2">
+            <div class="col-6 col-lg-3 pb-2">
                 <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
+                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
                 <div class="tdedstep">
                     <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
@@ -350,9 +398,9 @@
                 </div>
             </div>
 
-            <div class="col-3 pb-2">
+            <div class="col-6 col-lg-3 pb-2">
                 <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
+                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
                 <div class="tdedstep">
                     <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
@@ -362,9 +410,9 @@
                 </div>
             </div>
 
-            <div class="col-3 pb-2">
+            <div class="col-6 col-lg-3 pb-2">
                 <div class="img-tded">
-                    <img src="/images/balltor12.gif" alt="">
+                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
                 <div class="tdedstep">
                     <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
@@ -386,11 +434,11 @@
             <div class="col-12">
                 <div class="title">
                     <div class="row">
-                        <div class="col-10">
+                        <div class="col-8 col-lg-10">
                             <h1>ทรรศะบอลวันนี้</h1>
                         </div>
-                        <div class="col-2">
-                            <a href="#">ดูทั้งหมด</a>
+                        <div class="col-4 col-lg-2">
+                            <a href="/tded">ดูทั้งหมด</a>
                         </div>
                     </div>
                 </div>
@@ -413,11 +461,11 @@
 </div>
 {{-- { ช่องวาง api } --}}
 
-<div class="banner-1 pb-2">
+<div class="banner-1">
     <div class="container bg-black">
         <div class="row">
             <div class="col">
-                <a href="#"><img src="/images/bn7m.gif" alt=""></a>
+                <a href="https://gudunung.com/"><img src="/images/bn-4.gif" alt=""></a>
             </div>
         </div>
     </div>
