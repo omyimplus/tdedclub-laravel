@@ -9,7 +9,7 @@
                     <p><i class="fas fa-home"></i><a href="#"> <span>หน้าแรก</span>
                         </a><i class="fas fa-angle-right"></i> <span>ข่าวฟุตบอลประจำวัน</span></p>
                         <div class="row">
-                            <div class="col-4 pb-2">
+                            <div class="col-12 col-lg-4  pb-2">
                                 <div class="all-cat">
                                     <a href="#">
                                         <img src="/images/news-1.jpg" alt="Snow" style="width:100%">
@@ -18,7 +18,7 @@
                                     <span><i class="far fa-clock"></i> 1/6/2020 เวลา 00:00 น. <i class="far fa-eye"></i> 186 views</span>
                                 </div>
                             </div>
-                            <div class="col-4 pb-2">
+                            <div class="col-12 col-lg-4 pb-2">
                                 <div class="all-cat">
                                     <a href="#">
                                         <img src="/images/news-1.jpg" alt="Snow" style="width:100%">
@@ -27,7 +27,7 @@
                                     <span><i class="far fa-clock"></i> 1/6/2020 เวลา 00:00 น. <i class="far fa-eye"></i> 186 views</span>
                                 </div>
                             </div>
-                            <div class="col-4 pb-2">
+                            <div class="col-12 col-lg-4 pb-2">
                                 <div class="all-cat">
                                     <a href="#">
                                         <img src="/images/news-1.jpg" alt="Snow" style="width:100%">
@@ -36,7 +36,7 @@
                                     <span><i class="far fa-clock"></i> 1/6/2020 เวลา 00:00 น. <i class="far fa-eye"></i> 186 views</span>
                                 </div>
                             </div>
-                            <div class="col-4 pb-2">
+                            <div class="col-12 col-lg-4 pb-2">
                                 <div class="all-cat">
                                     <a href="#">
                                         <img src="/images/news-1.jpg" alt="Snow" style="width:100%">
@@ -45,7 +45,7 @@
                                     <span><i class="far fa-clock"></i> 1/6/2020 เวลา 00:00 น. <i class="far fa-eye"></i> 186 views</span>
                                 </div>
                             </div>
-                            <div class="col-4 pb-2">
+                            <div class="col-12 col-lg-4 pb-2">
                                 <div class="all-cat">
                                     <a href="#">
                                         <img src="/images/news-1.jpg" alt="Snow" style="width:100%">
@@ -54,7 +54,7 @@
                                     <span><i class="far fa-clock"></i> 1/6/2020 เวลา 00:00 น. <i class="far fa-eye"></i> 186 views</span>
                                 </div>
                             </div>
-                            <div class="col-4 pb-2">
+                            <div class="col-12 col-lg-4 pb-2">
                                 <div class="all-cat">
                                     <a href="#">
                                         <img src="/images/news-1.jpg" alt="Snow" style="width:100%">
@@ -63,7 +63,7 @@
                                     <span><i class="far fa-clock"></i> 1/6/2020 เวลา 00:00 น. <i class="far fa-eye"></i> 186 views</span>
                                 </div>
                             </div>
-                            <div class="col-4 pb-2">
+                            <div class="col-12 col-lg-4 pb-2">
                                 <div class="all-cat">
                                     <a href="#">
                                         <img src="/images/news-1.jpg" alt="Snow" style="width:100%">
@@ -72,7 +72,7 @@
                                     <span><i class="far fa-clock"></i> 1/6/2020 เวลา 00:00 น. <i class="far fa-eye"></i> 186 views</span>
                                 </div>
                             </div>
-                            <div class="col-4 pb-2">
+                            <div class="col-12 col-lg-4 pb-2">
                                 <div class="all-cat">
                                     <a href="#">
                                         <img src="/images/news-1.jpg" alt="Snow" style="width:100%">
@@ -81,7 +81,7 @@
                                     <span><i class="far fa-clock"></i> 1/6/2020 เวลา 00:00 น. <i class="far fa-eye"></i> 186 views</span>
                                 </div>
                             </div>
-                            <div class="col-4 pb-2">
+                            <div class="col-12 col-lg-4 pb-2">
                                 <div class="all-cat">
                                     <a href="#">
                                         <img src="/images/news-1.jpg" alt="Snow" style="width:100%">

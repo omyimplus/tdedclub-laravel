@@ -31,8 +31,8 @@ Route::get('/vicrow', function () {
     return view('pages.user.vicrow');
 });
 
-Route::get('/highlight', function () {
-    return view('pages.user.highlight');
+Route::get('/step', function () {
+    return view('pages.user.step');
 });
 
 Route::get('/admin', function () {

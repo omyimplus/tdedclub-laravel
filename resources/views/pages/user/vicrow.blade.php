@@ -4,7 +4,7 @@
 <div class="vicrow-page">
     <div class="container bg-black py-3">
         <div class="row">
-            <div class="col-8">
+            <div class="col-12 col-lg-8">
                 <h3>ข่าวฟุตบอลประจำวัน</h3>
                     <p><i class="fas fa-home"></i><a href="#"> <span>หน้าแรก</span>
                         </a><i class="fas fa-angle-right"></i> <span>ข่าวฟุตบอลประจำวัน</span></p>
@@ -20,7 +20,7 @@
                                 <div class="title">
                                     <div class="row">
                                         <div class="col-12">
-                                            <h1>ข่าวกีฬาน่าสนใจ</h1>
+                                            <h1>อัพเดทล่าสุด</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -28,19 +28,24 @@
                                 <div class="int-link">
                                     <ul class="interest">
                                         <li><i class="fas fa-angle-double-right text-warning"></i>
-                                            <a href="#">เทียบชัดๆ ส่อง 9 สถิติหลังเกม “แมนฯยู” บุกพ่าย “บอร์นมัธ”</a>
+                                            <a href="#">
+                                                <span>เทียบชัดๆ ส่อง 9 สถิติหลังเกม “แมนฯยู” บุกพ่าย “บอร์นมัธ”</span></a>
                                         </li>
                                         <li><i class="fas fa-angle-double-right text-warning"></i>
-                                            <a href="#">เทียบชัดๆ ส่อง 9 สถิติหลังเกม “แมนฯยู” บุกพ่าย “บอร์นมัธ”</a>
+                                            <a href="#">
+                                                <span>เทียบชัดๆ ส่อง 9 สถิติหลังเกม “แมนฯยู” บุกพ่าย “บอร์นมัธ”</span></a>
                                         </li>
                                         <li><i class="fas fa-angle-double-right text-warning"></i>
-                                            <a href="#">เทียบชัดๆ ส่อง 9 สถิติหลังเกม “แมนฯยู” บุกพ่าย “บอร์นมัธ”</a>
+                                            <a href="#">
+                                                <span>เทียบชัดๆ ส่อง 9 สถิติหลังเกม “แมนฯยู” บุกพ่าย “บอร์นมัธ”</span></a>
                                         </li>
                                         <li><i class="fas fa-angle-double-right text-warning"></i>
-                                            <a href="#">เทียบชัดๆ ส่อง 9 สถิติหลังเกม “แมนฯยู” บุกพ่าย “บอร์นมัธ”</a>
+                                            <a href="#">
+                                                <span>เทียบชัดๆ ส่อง 9 สถิติหลังเกม “แมนฯยู” บุกพ่าย “บอร์นมัธ”</span></a>
                                         </li>
                                         <li><i class="fas fa-angle-double-right text-warning"></i>
-                                            <a href="#">เทียบชัดๆ ส่อง 9 สถิติหลังเกม “แมนฯยู” บุกพ่าย “บอร์นมัธ”</a>
+                                            <a href="#">
+                                                <span>เทียบชัดๆ ส่อง 9 สถิติหลังเกม “แมนฯยู” บุกพ่าย “บอร์นมัธ”</span></a>
                                         </li>
                                     </ul>
                                 </div>
