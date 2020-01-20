@@ -101,16 +101,12 @@ function getYoutube($url) {
 }
 
 function ballstep($obj){
-    echo '<h1 style="margin: 0 0 5px 0;">ราคาบอลสเต็ป ทรรศนะบอลสเต็ป, ฟันธงบอลสเต็ป</h1>
+    echo '<h3 style="font-size:20px; margin: 10px 0 5px 0;">ราคาบอลสเต็ป ทรรศนะบอลสเต็ป, ฟันธงบอลสเต็ป</h3>
     <div id="review-socre">
        <div class="head-tded">
-          <h3><span style="color: #909090;">ประจำวันที่</span> '.dateThai(date('d-m-Y'),'off').'</h3>
+          <h3><span style="font-size:18px; color: #909090;">ประจำวันที่</span> '.thaiDate(date('d-m-Y'),'off').'</h3>
        </div>
-    </div>
- 
-    <hr class="gr">
-    <a href="'.url('/').'"><i class="fas fa-home text-danger"></i> <span class="text-light">หน้าแรก</span></a> <i class="fas fa-angle-right text-danger"></i> <span class="text-info">ราคาบอลสเต็ป ทรรศนะบอลสเต็ป, ฟันธงบอลสเต็ป</span>
-    <hr class="gr">';
+    </div>';
  
     $league='';
     foreach($obj->data as $ob) {
@@ -119,7 +115,7 @@ function ballstep($obj){
           echo '<div class="div-table league-name">
              <div class="div-tablerow">
              <div class="div-tablecell">
-                <img  src="'.url("/img/007-soccer-ball-1.png").'" class="linkimg" width="25px" height="25px" >&nbsp;';
+                <img  src="'.url("/images/007-soccer-ball-1.png").'" class="linkimg" width="25px" height="25px" >&nbsp;';
                 echo $ob->league_name;
              echo '</div>
              </div>
@@ -184,6 +180,13 @@ function ballstep($obj){
        </div>';
     }
 
-
-
- }
+    function visit($id, $act='show') { 
+        $v = DB::table('analyzes')->where('id', $id)->first();
+        if ($act == 'show') return $v->visit;
+        else {
+           DB::table('analyzes')->where('id',$id)->increment('visit');
+           $vc=$v->visit+1;
+           return $vc;
+        }
+     }
+}

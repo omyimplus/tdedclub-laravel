@@ -12,22 +12,25 @@
 */
 
 Route::get('/', 'FrontController@index');
+Route::get('/allvicrow', 'FrontController@allvicrow');
+Route::get('/allnews', 'FrontController@allnews');
+Route::get('/news/{id}', 'FrontController@news');
 
 Route::get('/live', function () {
     return view('pages.user.live');
 });
 
-Route::get('/review', function () {
-    return view('pages.user.review');
-});
+// Route::get('/review', function () {
+//     return view('pages.user.review');
+// });
 
 Route::get('/tded', function () {
     return view('pages.user.tded');
 });
 
-Route::get('/vicrow', function () {
-    return view('pages.user.vicrow');
-});
+// Route::get('/vicrow', function () {
+//     return view('pages.user.vicrow');
+// });
 
 Route::get('/step', function () {
     return view('pages.user.step');

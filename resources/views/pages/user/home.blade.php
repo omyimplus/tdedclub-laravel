@@ -114,7 +114,7 @@
                             <h1>ข่าวฟุตบอลประจำวัน</h1>
                         </div>
                         <div class="col-4 col-lg-2">
-                            <a href="/review">ดูทั้งหมด</a>
+                            <a href="{{url('/allnews')}}">ดูทั้งหมด</a>
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
 {{-- <หน้าคอนเท้> --}}
         <div class="row py-4">
             <div class="col-lg-8 mb-4 mb-lg-0">
-                <a href="#" class="imageMain">
+                <a href="{{url('/news/'.$last_news->id)}}" class="imageMain">
                     <section>
                         <img class="img-fluid" src="{{url('imgs/'.$last_news->image)}}" alt="">
                     </section>
@@ -137,7 +137,7 @@
             </div>
             <div class="col-lg-4">
                 @foreach($news as $n)
-                <a href="#" class="row mb-2 homeListnews">
+                <a href="{{url('/news/'.$n->id)}}" class="row mb-2 homeListnews">
                     <div class="col-4 px-lg-0">
                         <div class="imageContent"><img class="img" src="{{url('imgs/'.$n->image)}}" alt=""></div>
                     </div>
@@ -198,7 +198,7 @@
                             <h1>วิเคราะห์บอลวันนี้</h1>
                         </div>
                         <div class="col-4 col-lg-2">
-                            <a href="/vicrow">ดูทั้งหมด</a>
+                            <a href="{{url('/allvicrow')}}">ดูทั้งหมด</a>
                         </div>
                     </div>
                 </div>
@@ -224,58 +224,6 @@
                         </a>
                     </div>
                     @endforeach
-                    {{-- <div class="col-6 col-lg-4">
-                        <a href="#">
-                            <div class="img-zoom">
-                                <img src="images/tdedclub.jpg" class="img-fluid" alt="">
-                            </div>
-                            <p>วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
-                        </a>
-                    </div>
-                    <div class="col-6 col-lg-4">
-                        <a href="#">
-                            <div class="img-zoom">
-                                <img src="images/tdedclub.jpg" class="img-fluid" alt="">
-                            </div>
-                            <p>วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
-                        </a>
-                    </div>
-                    <div class="col-6 col-lg-4">
-                        <a href="#">
-                            <div class="img-zoom">
-                                <img src="images/tdedclub.jpg" class="img-fluid" alt="">
-                            </div>
-                            <p>วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
-                        </a>
-                    </div>
-                    <div class="col-6 col-lg-4">
-                        <a href="#">
-                            <div class="img-zoom">
-                                <img src="images/tdedclub.jpg" class="img-fluid" alt="">
-                            </div>
-                            <p>วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
-                        </a>
-                    </div>
-                    <div class="col-6 col-lg-4">
-                        <a href="#">
-                            <div class="img-zoom">
-                                <img src="images/tdedclub.jpg" class="img-fluid" alt="">
-                            </div>
-                            <p>วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล</p>
-                        </a>
-                    </div>
-                    <div class="col-6 col-lg-4">
-                        <a href="#">
-                            <div class="img-zoom">
-                                <img src="images/tdedclub.jpg" class="img-fluid" alt="">
-                            </div>
-                            <p>วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล
-                                วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล
-                                วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล
-                                วิเคราะห์บอลพรีเมียร์ลีก วันพุธที่ 10/12/2562 แมยูฯ ไนเต็ด vs ลิเวอร์พูล
-                            </p>
-                        </a>
-                    </div> --}}
                 </div>
             </div>
         </div>
@@ -305,102 +253,18 @@
 <div id="zeantded">
     <div class="container bg-black">
         <div class="row">
+            @foreach($tsteps as $ts)
             <div class="col-12 col-lg-3 py-2">
                 <div class="img-tded">
                     <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
                 <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> แมนแชสเตอร์ ยูไนเต็ด 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
+                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt="">{{$ts->team1}}</p></div>
+                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt="">{{$ts->team2}}</p></div>
+                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt="">{{$ts->team3}}</p></div>
                 </div>
             </div>
-
-            <div class="col-12 col-lg-3 py-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-3 py-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-3 py-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-3 pb-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-3 pb-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-3 pb-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-3 pb-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                </div>
-            </div>
-
+            @endforeach
         </div>
     </div>
 </div>
@@ -414,10 +278,10 @@
                 <div class="title">
                     <div class="row">
                         <div class="col-8 col-lg-10">
-                            <h1>ทรรศะบอลวันนี้</h1>
+                            <h1>ทรรศนะบอลวันนี้</h1>
                         </div>
                         <div class="col-4 col-lg-2">
-                            <a href="/tded">ดูทั้งหมด</a>
+                            {{-- <a href="/tded">ดูทั้งหมด</a> --}}
                         </div>
                     </div>
                 </div>
@@ -433,11 +297,13 @@
     <div class="container bg-black">
         <div class="row">
             <div class="col-12 pb-2">
-                <img style="width:100%;" src="images/api1.png" alt="">
+                {{-- <img style="width:100%;" src="images/api1.png" alt=""> --}}
+                {{ballstep($objs)}}
             </div>
         </div>
     </div>
 </div>
+
 {{-- { ช่องวาง api } --}}
 
 <div class="banner-1">

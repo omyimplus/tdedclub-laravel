@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,0DAA0D;AAC1D,IAAK;EAAE,WAAW,EAAE,8BAA6B;EAAE,WAAW,EAAE,GAAG;EAAE,gBAAgB,EAAE,eAAc;EAAE,KAAK,EAAE,eAAc;;AAO5H,8DAA8D;AAG9D,2DAA2D;AAE3D,4DAA4D",
+"sources": ["admin-style.scss"],
+"names": [],
+"file": "admin-style.css"
+}

@@ -44,15 +44,20 @@ body { font-family: 'Kanit', sans-serif!important; font-weight: 300; background-
      }
 }
 main {
-    .news { h3 { border-bottom: 2px solid #b40000; padding-bottom: 5px; margin: 0; }
-            a { text-decoration: none; color: #fff; }
-            i { color: #b40000; }
-            p { margin-bottom: 0px 10px; padding: 5px 0px; border-bottom: 1px solid #b40000; }
+    .news { 
+        h3 { border-bottom: 2px solid #b40000; padding-bottom: 5px; margin: 0; }
+        a { text-decoration: none; color: #fff; }
+        i { color: #b40000; }
+        p { margin-bottom: 0px 10px; padding: 5px 0px; border-bottom: 1px solid #b40000; }
         .all-cat {
-            a { text-decoration: none; color: rgb(175, 175, 175); margin: 0; &:hover{ color: #fff; }}
-            p { margin: 0; }
+            a { 
+                text-decoration: none; color: rgb(175, 175, 175); margin: 0; 
+                &:hover{ color: #fff; }
+                img { height: 100px; object-fit: cover; }
+                p { margin: 0; overflow:hidden; height:58px; }
+            }
             span { font-size: 10px; color: rgb(175, 175, 175); }
-         }
+        }
     }
 
     .zean1 {
@@ -63,8 +68,8 @@ main {
     }
 
     .vicrow-page {
-        h3 { color:#b40000; border-bottom: 2px solid #b40000; padding-bottom: 5px; margin: 0;}
-        p { margin-bottom: 0px 10px; padding: 5px 0px; border-bottom: 1px solid #b40000; }
+        h3 { color:#b40000; padding-bottom: 5px; margin: 0;}
+        p { margin-bottom: 0px 10px; padding: 5px 0px; }
         a { text-decoration: none; color: #fff; }
         i { color: #b40000;}
 
@@ -229,6 +234,17 @@ footer {
         p  { font-size: 0.9em; }
      }
 
+     .all-cat {
+        a { 
+            text-decoration: none; color: rgb(175, 175, 175); margin: 0; 
+            &:hover{ 
+                color: #fff; 
+            }
+            img { height: 200%; object-fit: cover; }
+            p { margin: 0; overflow:hidden; height:58px; }
+        }
+    }
+ 
 }
 
 
@@ -340,4 +356,6 @@ footer {
     }
 
 }
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) { 
+    
+}
