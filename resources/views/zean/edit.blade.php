@@ -1,5 +1,5 @@
 
-@extends('layouts.app', ['activePage' => 'youtube', 'titlePage' => __('Youtubes Management')])
+@extends('layouts.app', ['activePage' => 'zean', 'titlePage' => __('Youtubes Management')])
 
 @section('content')
     <div class="content">

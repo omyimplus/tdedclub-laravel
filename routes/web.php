@@ -75,7 +75,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('test', function (){ return view('blogs.test');});
-
+    Route::resource('ztstep', 'ZeanTstepContrller', ['except' => ['show']]);
     Route::resource('tstep', 'TstepController', ['except' => ['show']]);
     Route::resource('blogs', 'BlogController', ['except' => ['show']]);
     Route::resource('youtube', 'YoutubeController', ['except' => ['show']]);

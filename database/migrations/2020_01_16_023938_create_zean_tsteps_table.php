@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTstepsTable extends Migration
+class CreateZeanTstepsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateTstepsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tsteps', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('uid');
-            $table->string('team1');
-            $table->string('team2');
-            $table->string('team3');
+        Schema::create('zean_tsteps', function (Blueprint $table) {
+            $table->bigIncrements('id');  
+            $table->string('name');
+            $table->string('line');
+            $table->string('facebook');
+            $table->text('image');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateTstepsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tsteps');
+        Schema::dropIfExists('zean_tsteps');
     }
 }

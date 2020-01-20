@@ -1,18 +1,20 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\User;
 use App\Tstep;
-
 class TstepController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(Tstep $model)
+
+    public function index()
     {
-        return view('tstep.index', ['tsteps' => $model->orderBy('id','asc')->paginate(20)]);
+        // if ($t->created_at < date('Y-m-d 06:00:00')) echo $t->created_at.' / '.date('Y-m-d 06:00:00');
+        // $ts = new Tstep;
+        // $ts = $ts->all();
+        // return view('tstep.index', ['tsteps' => $ts]);
+        $us = new User;
+        $us = $us->where('level','1')->get();
+        return view('tstep.index', ['users' => $us]);
     }
 
     /**
@@ -31,9 +33,32 @@ class TstepController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'team1' => 'required',
+            'team2' => 'required',
+            'team3' => 'required',
+        ]);
+        $tstep = Tstep::where('uid', $request->input('uid'))->first();
+        if (count((array)$tstep)) {
+            $tstep->delete();
+            $tstep->uid = $request->input('uid');
+            $tstep->team1 = $request->input('team1');
+            $tstep->team2 = $request->input('team2');
+            $tstep->team3 = $request->input('team3');
+        }
+        else {
+            $tstep = new Tstep;
+            $tstep->uid = $request->input('uid');
+            $tstep->team1 = $request->input('team1');
+            $tstep->team2 = $request->input('team2');
+            $tstep->team3 = $request->input('team3');
+        }
+        $tstep->save();
+        return redirect('/tstep')->with('success','Success! New TededStep has been Created.');
+
     }
 
     /**
@@ -55,7 +80,7 @@ class TstepController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('tstep.edit', ['tstep' => Tstep::where('id',$id)->first()]);
     }
 
     /**
@@ -67,7 +92,23 @@ class TstepController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $validatedData = $request->validate([
+            'team1' => 'required',
+            'team2' => 'required',
+            'team3' => 'required',
+        ]);
+        if($request->hasFile('image')) $fileNameToStore=uploadImage($request->file('image'),'imgs');
+
+        $ts = Tstep::find($id);
+        //dd($ts);
+        $ts->uid = $ts->uid;
+        $ts->team1 = $request->input('team1');
+        $ts->team2 = $request->input('team2');
+        $ts->team3 = $request->input('team3');
+        $ts->save();
+        return redirect('/tstep')->with('success','Success! TededStep has been updated.');
+
     }
 
     /**

@@ -4,15 +4,15 @@
 @section('content')
     <div class="content">
         <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header card-header-primary">
-                                <h4 class="card-title ">{{ __('Blogs') }}</h4>
-                                <p class="card-category"> {{ __('ระบบจัดการข่าว') }}</p>
-                            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h4 class="card-title ">{{ __('Blogs') }}</h4>
+                            <p class="card-category"> {{ __('ระบบจัดการข่าว') }}</p>
+                        </div>
 
-                            <div class="card-body">
+                        <div class="card-body">
 
 
 
@@ -42,8 +42,7 @@
                 <div class="col-sm-7">
                     <div class="form-group">
                         <textarea class="form-control" name="content" id="ckeditor" required="" oninvalid="this.setCustomValidity('Content is require.')"
-                        oninput="setCustomValidity('')">{!!$blog->content!!}</textarea>
-                        
+                        oninput="setCustomValidity('')">{!!$blog->content!!}</textarea>           
                     </div>
                 </div>
             </div>        

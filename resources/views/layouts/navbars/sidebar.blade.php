@@ -52,18 +52,24 @@
             </li>
             <li class="nav-item{{ $activePage == 'tstep' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ url('/tstep') }}">
-                    <span class="sidebar-mini"> <i class="fas fa-cogs text-danger"></i> </span>
+                    <span class="sidebar-mini"> <i class="fab fa-angellist text-danger"></i> </span>
                     <span class="sidebar-normal">{{ __('ทีเด็ดสเต็ป') }} </span>
                 </a>
             </li>    
-
+            <li class="nav-item{{ $activePage == 'ztstep' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ url('/ztstep') }}">
+                    <span class="sidebar-mini"> <i class="far fa-address-book text-danger"></i> </span>
+                    <span class="sidebar-normal">{{ __('เซียนทีเด็ดสเต็ป') }} </span>
+                </a>
+            </li> 
             <li class="nav-item{{ $activePage == 'setup' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ url('/setup') }}">
                     <span class="sidebar-mini"> <i class="fas fa-cogs text-danger"></i> </span>
                     <span class="sidebar-normal">{{ __('ตั้งค่า') }} </span>
                 </a>
             </li>
-                      
+
+ 
             <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('profile.edit') }}">
                 <span class="sidebar-mini"> UP </span>
