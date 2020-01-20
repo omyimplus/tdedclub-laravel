@@ -105,6 +105,7 @@ footer {
  }
 
  .zean {
+     h2 { color: #b40000; }
     img {  width: 100%; height: auto; padding-bottom:10px; }
   }
 
@@ -160,7 +161,7 @@ footer {
      }
      .tdedstep{ background-color:#fff;
                 div { border-bottom: 2px solid #000; padding-left: 10px;
-                p   { margin: 0; color: #000;
+                p   { margin: 0; color: #000; font-size: 0.9em;
                 .img-1 { width: 25px; height: auto; margin: 0px 0px 5px 5px; }
             }
         }
@@ -218,6 +219,15 @@ footer {
     .title {
         h1 { font-size: 1.1em; }
     }
+
+    #vicrow {
+        p { font-size: 0.9em; height: 42px; }
+    }
+
+    .zean {
+        h2 { font-size: 1.3em; }
+        p  { font-size: 0.9em; }
+     }
 
 }
 

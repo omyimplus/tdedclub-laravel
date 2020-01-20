@@ -129,7 +129,7 @@
                     <section>
                         <img class="img-fluid" src="{{url('imgs/'.$last_news->image)}}" alt="">
                     </section>
-                    <div class="content">                      
+                    <div class="content">
                         <h5 class="px-3">{{$last_news->title}}</h5>
                         <p class="px-3">{{$last_news->description}}</p>
                     </div>
@@ -215,7 +215,7 @@
             <div class="col-12 pb-2">
                 <div class="row">
                     @foreach($analyzes as $an)
-                    <div class="col-6 col-lg-4">
+                    <div class="col-12 col-lg-4">
                         <a href="#">
                             <div class="img-zoom">
                                 <img src="{{url('imgs/'.$an->image)}}" class="img-fluid" alt="">
@@ -305,7 +305,19 @@
 <div id="zeantded">
     <div class="container bg-black">
         <div class="row">
-            <div class="col-6 col-lg-3 py-2">
+            <div class="col-12 col-lg-3 py-2">
+                <div class="img-tded">
+                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
+                </div>
+                <div class="tdedstep">
+                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> แมนแชสเตอร์ ยูไนเต็ด 0.5</p></div>
+                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
+                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
+                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 py-2">
                 <div class="img-tded">
                     <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
@@ -317,7 +329,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-lg-3 py-2">
+            <div class="col-12 col-lg-3 py-2">
                 <div class="img-tded">
                     <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
@@ -329,7 +341,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-lg-3 py-2">
+            <div class="col-12 col-lg-3 py-2">
                 <div class="img-tded">
                     <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
@@ -341,7 +353,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-lg-3 py-2">
+            <div class="col-12 col-lg-3 pb-2">
                 <div class="img-tded">
                     <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
@@ -353,7 +365,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-lg-3 pb-2">
+            <div class="col-12 col-lg-3 pb-2">
                 <div class="img-tded">
                     <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
@@ -365,7 +377,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-lg-3 pb-2">
+            <div class="col-12 col-lg-3 pb-2">
                 <div class="img-tded">
                     <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
@@ -377,19 +389,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-lg-3 pb-2">
-                <div class="img-tded">
-                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
-                </div>
-                <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt=""> บาเซโลน่า(N) 0.5</p></div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 pb-2">
+            <div class="col-12 col-lg-3 pb-2">
                 <div class="img-tded">
                     <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>

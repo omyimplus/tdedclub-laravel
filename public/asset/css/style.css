@@ -168,6 +168,8 @@ footer .footer-copyright {
   width: 100%;
   height: auto; }
 
+.zean h2 {
+  color: #b40000; }
 .zean img {
   width: 100%;
   height: auto;
@@ -268,7 +270,8 @@ footer .footer-copyright {
     padding-left: 10px; }
     #zeantded .tdedstep div p {
       margin: 0;
-      color: #000; }
+      color: #000;
+      font-size: 0.9em; }
       #zeantded .tdedstep div p .img-1 {
         width: 25px;
         height: auto;
@@ -365,7 +368,16 @@ footer .footer-copyright {
       display: none; }
 
   .title h1 {
-    font-size: 1.1em; } }
+    font-size: 1.1em; }
+
+  #vicrow p {
+    font-size: 0.9em;
+    height: 42px; }
+
+  .zean h2 {
+    font-size: 1.3em; }
+  .zean p {
+    font-size: 0.9em; } }
 @media (max-width: 768px) and (max-width: 991px) {
   .header .logo img {
     width: 145px;
