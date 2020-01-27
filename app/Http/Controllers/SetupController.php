@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Setup;
+use App\User;
+use Auth;
 class SetupController extends Controller
 {
     /**
@@ -12,7 +14,10 @@ class SetupController extends Controller
      */
     public function index(Setup $model)
     {
-        return view('setup.index', ['setups' => $model->orderBy('id','asc')->paginate(20)]);
+        if(Auth::user()->level >= 100) {
+            return view('setup.index', ['setups' => $model->orderBy('id','asc')->paginate(20)]);
+        }
+        else abort(403, 'Unauthorized action.');
     }
 
     /**

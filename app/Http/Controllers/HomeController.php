@@ -21,6 +21,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+//        if(\Auth::user()->level < 99) {
+            return view('dashboard');
+//        }
+//        else return ;
     }
 }

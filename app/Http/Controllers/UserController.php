@@ -1,11 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
-
-use App\User;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Hash;
-
+use App\User;
+use Auth;
 class UserController extends Controller
 {
     /**
@@ -16,6 +14,7 @@ class UserController extends Controller
      */
     public function index(User $model)
     {
+        if(Auth::user()->level < 100) abort(403, 'Unauthorized action.');
         return view('users.index', ['users' => $model->paginate(15)]);
     }
 
@@ -66,8 +65,15 @@ class UserController extends Controller
         $hasPassword = $request->get('password');
         $user->update(
             $request->merge(['password' => Hash::make($request->get('password'))])
-                ->except([$hasPassword ? '' : 'password']
+            ->except([$hasPassword ? '' : 'password']
         ));
+        $user->line=$request->input('line');
+        $user->facebook=$request->input('facebook');
+
+        if($request->hasFile('avatar')) $fileNameToStore=uploadImage($request->file('avatar'),'avatar');
+        else $fileNameToStore='';
+
+        if ($fileNameToStore) $user->avatar=$fileNameToStore;
         $user->level=$request->input('level');
         $user->save();
         return redirect()->route('user.index')->withStatus(__('User successfully updated.'));

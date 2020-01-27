@@ -5,7 +5,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <form method="post" action="{{ route('user.update', $user) }}" autocomplete="off" class="form-horizontal">
+          <form method="post" action="{{ route('user.update', $user) }}" autocomplete="off" class="form-horizontal" enctype="multipart/form-data">
             @csrf
             @method('put')
 
@@ -69,7 +69,42 @@
                       <input class="form-control" name="level" id="level" type="type" value="{{ $user->level }}" placeholder="{{ __('ใส่ระดับเลเวลของแอดมิน') }}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
                       </div>
                     </div>
-                </div>                
+                </div> 
+                
+
+                <div class="row">
+                    <label class="col-sm-2 col-form-label" for="input-level-confirmation">{{ __('line') }}</label>
+                    <div class="col-sm-7">
+                      <div class="form-group">
+                      <input class="form-control" name="line" id="line" type="type" value="{{ $user->line }}" placeholder="{{ __('ไลน์ไอดี') }}" />
+                      </div>
+                    </div>
+                </div>  
+
+                <div class="row">
+                    <label class="col-sm-2 col-form-label" for="input-level-confirmation">{{ __('เฟสบุ๊ค') }}</label>
+                    <div class="col-sm-7">
+                      <div class="form-group">
+                      <input class="form-control" name="facebook" id="facebook" type="type" value="{{ $user->facebook }}" placeholder="{{ __('เฟสบุ๊ค') }}" />
+                      </div>
+                    </div>
+                </div>  
+
+                <div class="row">
+                    <label class="col-sm-2 col-form-label mt-2" for="title">รูปภาพ</label>
+                    <div class="col-sm-7">    
+                        @if($user->avatar) 
+                        <div style="display: block; height: 150px; width: 250px;">
+                            <img src="{{url('avatar/'.$user->avatar)}}" alt="{{$user->name}}" style="height: 100%; width: 100%; object-fit: cover;">
+                        </div>
+                        @endif
+                        <div class="custom-file mt-3">
+                            <input type="file" name="avatar" style="cursor: pointer;" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile"><u>เปลี่ยนภาพอัพโหลด</u></label>
+                        </div>
+                    </div>
+                </div>
+
               </div>
               <div class="card-footer ml-auto mr-auto">
                 <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>

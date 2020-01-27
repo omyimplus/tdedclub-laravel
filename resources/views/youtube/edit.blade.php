@@ -48,8 +48,10 @@
                 <label class="col-sm-1 col-form-label mt-2" for="title">รูปภาพ</label>
                 <div class="col-sm-7">
                     
-                    <img src="{{url('imgs/'.$youtube->image)}}" alt="{{$youtube->title}}" width="250px">
-                    <div class="custom-file mt-3">
+                   @if($youtube->image)
+                   <img src="{{url('imgs/'.$youtube->image)}}" alt="{{$youtube->title}}" width="250px">
+                   @endif
+                   <div class="custom-file mt-3">
                         <input type="file" name="image" style="cursor: pointer;" class="custom-file-input" id="customFile">
                         <label class="custom-file-label" for="customFile"><u>เปลี่ยนภาพอัพโหลด</u></label>
                     </div>

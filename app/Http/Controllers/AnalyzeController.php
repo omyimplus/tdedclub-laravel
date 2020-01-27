@@ -9,6 +9,7 @@ class AnalyzeController extends Controller
 {
     public function index(Analyze $model)
     {
+        if(Auth::user()->level < 100) abort(403, 'Unauthorized action.');
         return view('analyze.index', ['analyze' => $model->orderBy('id','desc')->paginate(15)]);
     }
 
@@ -114,7 +115,7 @@ class AnalyzeController extends Controller
             else $as->image = $fileNameToStore;
         }
         $as->save();
-        dd($fileNameToStore);
+
         return redirect('/analyze')->with('success','Success! Analyze id #'.$id.' has been updated.');
     }
 

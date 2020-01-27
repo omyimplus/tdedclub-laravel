@@ -9,6 +9,7 @@ class YoutubeController extends Controller
 {
 
     public function index(Youtube $model) {
+        if(Auth::user()->level < 100) abort(403, 'Unauthorized action.');
         return view('youtube.index', ['youtubes' => $model->orderBy('id','desc')->paginate(20)]);
     }
 
@@ -18,6 +19,7 @@ class YoutubeController extends Controller
     }
 
     public function store(Request $request) {
+  
         if(Youtube::where('title', $request->input('title'))->first()) {
             return redirect()->back()->withInput()->with('error', 'Error! Title has data already exists.');
         }   
@@ -41,7 +43,7 @@ class YoutubeController extends Controller
         $ys->visit = ($ys->visit == '')?0:$ys->visit;
         $ys->clip = ($request->input('clip')!=null) ? getYoutube($request->input('clip')):null;
         $ys->cid = ($request->input('cid')!=null)?$request->input('cid'):'0';
-        $ys->image = $fileNameToStore;
+        if ($request->hasFile('image')!=false) $ys->image = $fileNameToStore;
         $ys->save();
         return redirect('/youtube')->with('success','Success! New Youtube has been Created.');
     }

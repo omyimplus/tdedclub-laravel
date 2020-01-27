@@ -76,7 +76,7 @@
 					</script>
 						<div class="row" id="listBlog">
 							<div class="col-md-12">
-								<div>
+								<div class="d-none">
 									<a href="#" class="btn btn-success" id="addButton">เพิ่มทำนายผล</a>
 								</div>
 
@@ -91,26 +91,24 @@
 										</thead>
 										<tbody>
 											@foreach($users as $user)
-											<?php	$step = DB::table('tsteps')->where('uid',$user->id)->get();	?>
+											<?php $step = DB::table('tsteps')->where('uid',$user->id)->get(); ?>
 											<tr>
 												<td>{{$user->id}}</td>
 												<td>
-													@if(count($step))
-													
+                                                    @if($step->count())
 													{{$user->name}}
 													@else
 													{{$user->name}}
 													@endif
 												</td>
-												@if(count($step))
+												@if($step->count())
 													@foreach($step as $ts)
-														@if ($loop->first)
+														@if($loop->first)
 														<td>
 															<a href="{{url('tstep/'.$ts->id.'/edit')}}" rel="tooltip" >
 																{{$ts->team1}} | {{$ts->team2}} | {{$ts->team3}}
 															</a>
 														</td>
-														{{-- <td>{{$ts->team1}} | {{$ts->team2}} | {{$ts->team3}}</td> --}}
 														<td>{{$ts->created_at}}</td>
 														@endif
 													@endforeach

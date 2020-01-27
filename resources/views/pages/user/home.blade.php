@@ -5,9 +5,7 @@
 <div class="banner-1">
     <div class="container bg-black">
         <div class="row">
-            <div class="col">
-                <a href="https://www.mm88online.com/"><img src="/images/bn-1.gif" alt=""></a>
-            </div>
+            <div class="col"><a href="https://www.mm88online.com/"><img src="/images/bn-1.gif" alt=""></a></div>
         </div>
     </div>
 </div>
@@ -19,12 +17,8 @@
             <div class="col-12">
                 <div class="title">
                     <div class="row">
-                        <div class="col-8 col-lg-10">
-                            <h1>ดูบอลออนไลน์ฟรี</h1>
-                        </div>
-                        <div class="col-4 col-lg-2">
-                            <a href="/live">ดูทั้งหมด</a>
-                        </div>
+                        <div class="col-8 col-lg-10"><h1>ดูบอลออนไลน์ฟรี</h1></div>
+                        <div class="col-4 col-lg-2"><a href="/live">ดูทั้งหมด</a></div>
                     </div>
                 </div>
             </div>
@@ -38,68 +32,22 @@
 <div id="doball">
     <div class="container bg-black">
         <div class="row">
-                <div class="col-12 col-lg-4">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="rounded mt-2">
-
-                                <div class="panel panel-info" >
-                                   <div class="panel-heading">
-                                   <div>
-                                      <img src="/images/logo-online.png" alt="" width="100%">
-                                   </div>
-                                      <h3 class="text-center"> สมัครสมาชิกผ่านหน้าเว็บ</h3>
-                                   </div>
-                                   <div class="panel-body" >
-                                      <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-                                         <form name="line-notify" class="form-horizontal" role="form" action="{{url('/api/line')}}" method="post">
-                                            <div class="input-group" style="margin-bottom: 10px">
-                                               <div class="input-group-prepend">
-                                                  <span class="input-group-text">
-                                                  <span class="fa fa-user text-primary"></span>
-                                                  </span>
-                                               </div>
-                                               <input name="fullname" id="fullname" type="text" class="form-control" value="" placeholder="ชื่อ - นามสกุล" required>
-                                            </div>
-                                            <div class="input-group" style="margin-bottom: 10px">
-                                               <div class="input-group-prepend">
-                                                  <span class="input-group-text">
-                                                     <span class="fas fa-mobile"></span>
-                                                  </span>
-                                               </div>
-                                               <input name="phone" id="phone" type="text" class="form-control" maxlength="10" placeholder="เบอร์โทรศัพท์" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" required>
-                                            </div>
-                                            <div class="input-group" style="margin-bottom: 10px">
-                                               <div class="input-group-prepend">
-                                                  <span class="input-group-text">
-                                                     <span class="fab fa-line text-success"></span>
-                                                  </span>
-                                               </div>
-                                               <input name="lineid" id="lineid" type="text" class="form-control" placeholder="lineID" required>
-                                            </div>
-                                            <div class="form-group">
-                                               <div class="col-sm-12 col-md-12 col-xs-12 p-0">
-                                                  <button class="btn text-white" style="font-size:17px; background-color:#00c200; width:100%;" name="submit" type="submit">ยืนยันข้อมูลการสมัคร</button>
-                                               </div>
-                                            </div>
-                                         </form>
-                                      </div>
-                                   </div>
-                              </div>
-                        </div>
-                            <div class="col">
-                                <a href="http://nav.cx/52dtFXm"><img class="banner-auto" src="/images/promotion-1.jpg" alt=""></a>
-                            </div>
+            <div class="col-12 col-lg-4">
+                <div class="row">
+                    @include('component.line-notify')
+                    <div class="col">
+                        <a href="http://nav.cx/52dtFXm"><img class="banner-auto" src="/images/promotion-1.jpg" alt=""></a>
                     </div>
                 </div>
-                        <div class="col-8">
-                            <img class="img-doball" src="/images/bg-channal.jpg" alt="">
-                                <img class="leauge" src="/images/bn-leauge.png" alt="">
-                        </div>
-                </div>
+            </div>
+            <div class="col-8">
+                <img class="img-doball" src="/images/bg-channal.jpg" alt="">
+                <img class="leauge" src="/images/bn-leauge.png" alt="">
+            </div>
         </div>
     </div>
 </div>
+
 {{-- <ช่องดูบอลออนไลน์> --}}
 
 
@@ -160,16 +108,13 @@
 <div id="youtube">
     <div class="container bg-black pb-2">
         <div class="row">
-            <div class="col-12 col-lg-6 pr-1">
+            @foreach($youtubes as $yt)
+            <div class="col-xs-12 col-lg-6 pr-3">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://www.youtube.com/embed/yfO65sfWQtc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="{{$yt->clip}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 pl-1">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://www.youtube.com/embed/yfO65sfWQtc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
@@ -180,8 +125,8 @@
         <div class="row">
             <div class="col-12">
                 <a href="https://www.mm88online.com/"><img src="/images/bn-3.gif" alt=""></a>
-                    <h2>ทรรศนะบอล ทีเด็ดบอล บ้านผลบอล</h2>
-                        <p>ทรรศนะบอลวันนี้ วิเคราะห์บอลวันนี้ ทรรศนะเซียนบอล ทีเด็ดบอล ทีเด็ดบอลรายวัน ทีเด็ดบอลวันนี้ บอลเต็ง บอลสเต็ป บ้านผลบอล ทีเด็ดบอลเต็ง ทีเด็ดบอลเดี่ยว วิเคราะห์บอลทุกคู่ วิเคราะห์บอลทุกลีก ทรรศนะเซียนบอลวันนี้ ทีเด็ดบอลวันนี้ แหล่งรวมเซียนบอล ผลบอล วิเคราะห์บอลสุดแม่น ราคาบอล ทีเด็ดฟุตบอล ทีเด็ดบอลวันนี้ โปรแกรมบอลวันนี้</p>
+                <h2>ทรรศนะบอล ทีเด็ดบอล บ้านผลบอล</h2>
+                <p>ทรรศนะบอลวันนี้ วิเคราะห์บอลวันนี้ ทรรศนะเซียนบอล ทีเด็ดบอล ทีเด็ดบอลรายวัน ทีเด็ดบอลวันนี้ บอลเต็ง บอลสเต็ป บ้านผลบอล ทีเด็ดบอลเต็ง ทีเด็ดบอลเดี่ยว วิเคราะห์บอลทุกคู่ วิเคราะห์บอลทุกลีก ทรรศนะเซียนบอลวันนี้ ทีเด็ดบอลวันนี้ แหล่งรวมเซียนบอล ผลบอล วิเคราะห์บอลสุดแม่น ราคาบอล ทีเด็ดฟุตบอล ทีเด็ดบอลวันนี้ โปรแกรมบอลวันนี้</p>
             </div>
         </div>
     </div>
@@ -194,12 +139,8 @@
             <div class="col-12">
                 <div class="title">
                     <div class="row">
-                        <div class="col-8 col-lg-10">
-                            <h1>วิเคราะห์บอลวันนี้</h1>
-                        </div>
-                        <div class="col-4 col-lg-2">
-                            <a href="{{url('/allvicrow')}}">ดูทั้งหมด</a>
-                        </div>
+                        <div class="col-8 col-lg-10"><h1>วิเคราะห์บอลวันนี้</h1></div>
+                        <div class="col-4 col-lg-2"><a href="{{url('/allvicrow')}}">ดูทั้งหมด</a></div>
                     </div>
                 </div>
             </div>
@@ -216,10 +157,8 @@
                 <div class="row">
                     @foreach($analyzes as $an)
                     <div class="col-12 col-lg-4">
-                        <a href="#">
-                            <div class="img-zoom">
-                                <img src="{{url('imgs/'.$an->image)}}" class="img-fluid" alt="">
-                            </div>
+                        <a href="{{url('/vview/'.$an->id)}}">
+                            <div class="img-zoom"><img src="{{url('imgs/'.$an->image)}}" class="img-fluid" alt=""></div>
                             <p>{{$an->title}}</p>
                         </a>
                     </div>
@@ -238,9 +177,7 @@
             <div class="col-12">
                 <div class="title">
                     <div class="row">
-                        <div class="col-12 texthead">
-                            <h1>ทีเด็ดสเต็ป วันที่ 9 มกราคม 2563</h1>
-                        </div>
+                        <div class="col-12 texthead"><h1>ทีเด็ดสเต็ป วันที่ 9 มกราคม 2563</h1></div>
                     </div>
                 </div>
             </div>
@@ -259,12 +196,43 @@
                     <img src="/images/balltor12.gif" class="img-fluid" alt="">
                 </div>
                 <div class="tdedstep">
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt="">{{$ts->team1}}</p></div>
-                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt="">{{$ts->team2}}</p></div>
-                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt="">{{$ts->team3}}</p></div>
+                <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt="">
+                    {{$ts['team1']}}
+                </p></div>
+                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt="">{{$ts['team2']}}</p></div>
+                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt="">{{$ts['team3']}}</p></div>
                 </div>
             </div>
-            @endforeach
+            @endforeach 
+            {{-- @foreach($tsteps as $ts)
+            <div class="col-12 col-lg-3 py-2">
+                <div class="img-tded">
+                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
+                </div>
+                <div class="tdedstep">
+                <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt="">
+                    {{$ts[0]['team1']}}
+
+                </p></div>
+                    <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt="">{{$ts[0]['team2']}}</p></div>
+                    <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt="">{{$ts[0]['team3']}}</p></div>
+                </div>
+            </div>
+            @endforeach --}}
+            {{-- @if (8 > count($tsteps))
+                @for ($i = 0; $i < (8 - count($tsteps)); $i++)
+                <div class="col-12 col-lg-3 py-2">
+                    <div class="img-tded">
+                        <img src="/images/balltor12.gif" class="img-fluid" alt="">
+                    </div>
+                    <div class="tdedstep">
+                        <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt="">&nbsp;</p></div>
+                        <div class="py-2 bg-grey"><p><img class="img-1" src="/images/ball.gif" alt="">&nbsp;</p></div>
+                        <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt="">&nbsp;</p></div>
+                    </div>
+                </div>   
+                @endfor
+            @endif --}}
         </div>
     </div>
 </div>
@@ -277,9 +245,7 @@
             <div class="col-12">
                 <div class="title">
                     <div class="row">
-                        <div class="col-8 col-lg-10">
-                            <h1>ทรรศนะบอลวันนี้</h1>
-                        </div>
+                        <div class="col-8 col-lg-10"><h1>ทรรศนะบอลวันนี้</h1></div>
                         <div class="col-4 col-lg-2">
                             {{-- <a href="/tded">ดูทั้งหมด</a> --}}
                         </div>
@@ -296,10 +262,7 @@
 <div class="api">
     <div class="container bg-black">
         <div class="row">
-            <div class="col-12 pb-2">
-                {{-- <img style="width:100%;" src="images/api1.png" alt=""> --}}
-                {{ballstep($objs)}}
-            </div>
+            <div class="col-12 pb-2">{{ballstep($objs)}}</div>
         </div>
     </div>
 </div>

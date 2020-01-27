@@ -38,6 +38,15 @@
                         {{ __('Email') }}
                       </th>
                       <th>
+                        {{ __('Line') }}
+                      </th>
+                      <th>
+                        {{ __('Facebook') }}
+                      </th>
+                      <th>
+                        {{ __('Avatar') }}
+                      </th>
+                      <th>
                         {{ __('Level') }}
                       </th>
                       <th>
@@ -56,6 +65,22 @@
                           <td>
                             {{ $user->email }}
                           </td>    
+                          <td>
+                            @if($user->line)
+                            <i class="fab fa-line text-success fa-2x"></i>
+                            @endif                            
+                          </td>   
+                          <td>
+                            @if($user->facebook)
+                            <i class="fab fa-facebook-square text-info fa-2x"></i>
+                            @endif
+                          </td>   
+                          <td>
+                            @if($user->avatar)
+                            <i class="far fa-id-badge text-warning fa-2x"></i>
+                            @endif
+                            
+                          </td>   
                           <td>
                             {{ $user->level }}
                           </td>                          

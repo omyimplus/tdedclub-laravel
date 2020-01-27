@@ -1,20 +1,13 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', 'FrontController@index');
 Route::get('/allvicrow', 'FrontController@allvicrow');
 Route::get('/allnews', 'FrontController@allnews');
 Route::get('/news/{id}', 'FrontController@news');
+Route::get('/vview/{id}', 'FrontController@vview');
+Route::get('/tdstep', 'FrontController@fullpage');
+Route::get('/tdstep2', 'FrontController@fullpage2');
+Route::post('/line-notify', 'FrontController@lineNotify');
 
 Route::get('/live', function () {
     return view('pages.user.live');
@@ -42,7 +35,7 @@ Route::get('/admin', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('table-list', function () {
@@ -73,11 +66,16 @@ Route::group(['middleware' => 'auth'], function () {
 		return view('pages.upgrade');
 	})->name('upgrade');
 });
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+Route::get('/zuser', function () {
+    return 'zuser';
+});
+Route::resource('tstep', 'TstepController', ['except' => ['show']]);
+Route::group(['middleware' => ['admin']], function(){
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('test', function (){ return view('blogs.test');});
+//    Route::get('test', function (){ return view('blogs.test');});
     Route::resource('ztstep', 'ZeanTstepContrller', ['except' => ['show']]);
-    Route::resource('tstep', 'TstepController', ['except' => ['show']]);
+//    Route::resource('tstep', 'TstepController', ['except' => ['show']]);
     Route::resource('blogs', 'BlogController', ['except' => ['show']]);
     Route::resource('youtube', 'YoutubeController', ['except' => ['show']]);
     Route::resource('analyze', 'AnalyzeController', ['except' => ['show']]);
@@ -92,3 +90,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('ckeditor/upload', 'CkeditorController@upload')->name('ckeditor.upload');
 });
 
+Route::group(['prefix' => 'admin'], function(){
+    Route::group(['middleware' => ['admin']], function(){
+        Route::get('/dashboard', 'admin\AdminController@index');
+    });
+});

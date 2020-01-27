@@ -72,7 +72,7 @@
             <input type="hidden" name="_method" value="PUT">
             <div class="row">
                 <div class="card-footer ml-auto mr-auto">
-                    <a class="btn btn-warning" style="text-decoration:none;" href="{{url('youtube/')}}"> &nbsp; &nbsp; Cancel &nbsp; &nbsp; </a> &nbsp;
+                    <a class="btn btn-warning" style="text-decoration:none;" href="{{url('blogs/')}}"> &nbsp; &nbsp; Cancel &nbsp; &nbsp; </a> &nbsp;
                     <button type="submit" class="btn btn-primary">บันทึกข้อมูล</button>
                 </div>
             </div>

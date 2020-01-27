@@ -11,37 +11,15 @@ class TstepsTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\Tstep::insert([
-            'uid' => '1',
-            'team1' => 'ยังไม่มีข้อมูล',
-            'team2' => 'ยังไม่มีข้อมูล',
-            'team3' => 'ยังไม่มีข้อมูล',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        \App\Tstep::insert([
-            'uid' => '1',
-            'team1' => 'ยังไม่มีข้อมูล',
-            'team2' => 'ยังไม่มีข้อมูล',
-            'team3' => 'ยังไม่มีข้อมูล',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        \App\Tstep::insert([
-            'uid' => '1',
-            'team1' => 'ยังไม่มีข้อมูล',
-            'team2' => 'ยังไม่มีข้อมูล',
-            'team3' => 'ยังไม่มีข้อมูล',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        \App\Tstep::insert([
-            'uid' => '1',
-            'team1' => 'ยังไม่มีข้อมูล',
-            'team2' => 'ยังไม่มีข้อมูล',
-            'team3' => 'ยังไม่มีข้อมูล',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+        for ($i=1; $i < 9; $i++) { 
+            \App\Tstep::insert([
+                'uid' => ceil($i+1),
+                'team1' => 'ยังไม่มีข้อมูล',
+                'team2' => 'ยังไม่มีข้อมูล',
+                'team3' => 'ยังไม่มีข้อมูล',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+        }
     }
 }

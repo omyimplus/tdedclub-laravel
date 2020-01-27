@@ -1,20 +1,24 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\User;
 use App\Tstep;
+use App\User;
+use Auth;
 class TstepController extends Controller
 {
-
+    public function __construct()
+    {
+        
+    }
     public function index()
     {
+        if(Auth::user()->level == 1 || Auth::user()->level >= 100) {
         // if ($t->created_at < date('Y-m-d 06:00:00')) echo $t->created_at.' / '.date('Y-m-d 06:00:00');
-        // $ts = new Tstep;
-        // $ts = $ts->all();
-        // return view('tstep.index', ['tsteps' => $ts]);
-        $us = new User;
-        $us = $us->where('level','1')->get();
-        return view('tstep.index', ['users' => $us]);
+            $us = new User;
+            $us = $us->where('level','1')->get();
+            return view('tstep.index', ['users' => $us]);
+        }
+        else abort(403, 'Unauthorized action.');
     }
 
     /**
