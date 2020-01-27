@@ -190,10 +190,14 @@
 <div id="zeantded">
     <div class="container bg-black">
         <div class="row">
-            @foreach($tsteps as $ts)
+            @foreach($tstepsx as $ts)
             <div class="col-12 col-lg-3 py-2">
                 <div class="img-tded">
-                    <img src="/images/balltor12.gif" class="img-fluid" alt="">
+                    @if($ts['avatar'])
+                    <a href="#lineID"><img src="{{url('/avatar/'.$ts['avatar'])}}" class="img-fluid"></a>
+                    @else
+                    <a href="#lineID"><img src="/images/balltor12.gif" class="img-fluid"></a>
+                    @endif
                 </div>
                 <div class="tdedstep">
                 <div class="py-2"><p><img class="img-1" src="/images/ball.gif" alt="">

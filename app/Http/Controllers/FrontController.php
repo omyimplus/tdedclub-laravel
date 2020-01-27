@@ -7,6 +7,7 @@ use App\Blog;
 use App\Analyze;
 use App\Tstep;
 use App\Youtube;
+use App\User;
 class FrontController extends Controller
 {
 	public function index() {
@@ -17,11 +18,27 @@ class FrontController extends Controller
 		$analyzes = $anas->orderBy('id','desc')->take(6)->get();
 		$ts = new Tstep;
 		$tsteps = $ts->orderBy('id','desc')->where('updated_at','>',date("Y-m-d 06:00:00"))->take(8)->get();
-		//$tstepsx = $ts->orderBy('id','desc')->where('updated_at','>',date("Y-m-d 06:00:00"))->take(8)->get();
+		$tstepsx = $ts->orderBy('id','desc')->where('updated_at','>',date("Y-m-d 06:00:00"))->take(8)->get();
 		$json = file_get_contents('https://zeanza.com/mm88fa-api/vision_data/api.php?met=hdp&APIkey=S09ZWFArak1BZTNpcUZGNTA2YWVia2tjU0F0bUVyazNZdjJVSGpZWXJMcDlrWHFYRGNnYlRjTWphaFg1RUVVWGh6WjNsUDZ6WUJKeDlCYUFRZzdrenc9PTo6G5mkISD1Nfndtt7QHBsBSA==');
 		$objs = json_decode($json);
 		$you = new Youtube;
 		$yous = $you->orderBy('id','desc')->take(2)->get();
+        $max_tstep=$tstepsx->count();
+        if ($max_tstep == 8) {
+			foreach($tstepsx as $ttsx) {
+                $av = User::where('id',$ttsx->uid)->first();
+				$dataxSet[] = [
+					"id"=> $ttsx->id,
+					"uid"=> $ttsx->uid,
+					"team1"=> $ttsx->team1,
+					"team2"=> $ttsx->team2,
+					"team3"=> $ttsx->team3,
+					"created_at"=> $ttsx->created_at,
+                    "updated_at"=> $ttsx->updated_at,
+                    "avatar"=>$av->avatar
+				];
+			}            
+        }
 
 		$max_count = $tsteps->count();
 		if ($max_count == 0) {
@@ -80,7 +97,8 @@ class FrontController extends Controller
 			'analyzes'=>$analyzes,
 			'tsteps'=>$dataSet,
 			'objs'=>$objs,
-			'youtubes'=>$yous
+            'youtubes'=>$yous,
+            'tstepsx'=>$dataxSet
 		]);
 	}
 
