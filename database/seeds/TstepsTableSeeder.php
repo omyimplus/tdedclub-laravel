@@ -14,9 +14,9 @@ class TstepsTableSeeder extends Seeder
         for ($i=1; $i < 9; $i++) { 
             \App\Tstep::insert([
                 'uid' => ceil($i+1),
-                'team1' => 'ยังไม่มีข้อมูล',
-                'team2' => 'ยังไม่มีข้อมูล',
-                'team3' => 'ยังไม่มีข้อมูล',
+                'team1' => 'AZ อัลค์ม่าร์ 2 รอง 0.25 (HOL D2 02:00)',
+                'team2' => 'พีเอสวี ไอนด์โฮเฟ่น(เยาวชน) รอง 0.25 (HOL D2 02:00)',
+                'team3' => 'ทรัวส์ รอง 0.25 (FRA D2 02:45)',
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
